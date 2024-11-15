@@ -15,7 +15,9 @@
           <ul class="flex justify-center gap-x-4">
             <li class="border-r-2 border-r-black pr-5">Full-stack Developer</li>
             <li class="border-r-2 border-r-black pr-5">Creative Artist</li>
-            <li class="border-r-2 border-r-black pr-5">Passionate Learner</li>
+            <li class="border-r-2 border-r-black pr-5">
+              Passionate Learnerzzz
+            </li>
             <li class="">Technology Enthusiast</li>
           </ul>
         </div>
