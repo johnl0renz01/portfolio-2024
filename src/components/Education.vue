@@ -63,7 +63,7 @@ details:not([open]) summary::after {
 
 <template>
   <section
-    class="flex flex-col bg-transparent text-darkbeige sm:px-6 lg:px-[23rem] pb-20"
+    class="flex flex-col bg-transparent text-white sm:px-6 lg:px-[23rem] pb-20"
   >
     <div
       class="relative"
@@ -83,15 +83,13 @@ details:not([open]) summary::after {
           <ul>
             <li>
               <ul>
-                <li class="text-gray-100 leading-8">
+                <li class="leading-8">
                   {{ education.major }}
                 </li>
-                <li class="text-[1.1rem] text-gray-100 font-normal italic">
+                <li class="text-[1.1rem] font-normal italic">
                   {{ education.university }}
                 </li>
-                <li
-                  class="text-[1.1rem] text-gray-100 font-normal font-kanit italic"
-                >
+                <li class="text-[1.1rem] font-normal font-kanit italic">
                   {{ education.date }}
                 </li>
               </ul>
@@ -100,7 +98,7 @@ details:not([open]) summary::after {
         </div>
 
         <div
-          class="relative pl-20 border-l-[1px] border-l-gray-100/40 pb-16 text-gray-100 pr-[45%]"
+          class="relative pl-20 border-l-[1px] border-l-gray-100/40 pb-16 pr-[45%]"
         >
           <ul class="space-y-3 drop-shadow">
             <li

@@ -69,7 +69,7 @@ details:not([open]) summary::after {
   >
     <div class="mb-10 text-center">
       <p
-        class="inline-block px-4 py-2 bg-normalshade font-montserrat text-white text-2xl font-bold"
+        class="inline-block px-4 py-2 bg-normalshade font-montserrat text-2xl font-bold"
       >
         Timeline
       </p>
@@ -92,20 +92,14 @@ details:not([open]) summary::after {
           <ul>
             <li>
               <ul>
-                <li class="text-gray-100 leading-8">{{ experience.title }}</li>
-                <li
-                  class="text-[1.1rem] text-gray-100 font-semibold font-nunito italic"
-                >
+                <li class="leading-8">{{ experience.title }}</li>
+                <li class="text-[1.1rem] font-semibold font-nunito italic">
                   {{ experience.location }}
                 </li>
-                <li
-                  class="text-[1rem] text-gray-100 font-normal font-nunito italic"
-                >
+                <li class="text-[1rem] font-normal font-nunito italic">
                   {{ experience.type }}
                 </li>
-                <li
-                  class="text-[1.1rem] text-gray-100 font-normal font-kanit italic"
-                >
+                <li class="text-[1.1rem] font-normal font-kanit italic">
                   {{ experience.date }}
                 </li>
               </ul>
@@ -114,7 +108,7 @@ details:not([open]) summary::after {
         </div>
 
         <div
-          class="relative pl-20 border-l-[1px] border-l-gray-100/40 pb-16 text-gray-100 pr-[45%]"
+          class="relative pl-20 border-l-[1px] border-l-gray-100/40 pb-16 pr-[45%]"
         >
           <ul class="space-y-2 drop-shadow">
             <li

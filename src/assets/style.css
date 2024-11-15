@@ -57,6 +57,29 @@ html {
   }
 }
 
+.style-1::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0px rgba(236, 236, 236, 0.41);
+  border-radius: 10px;
+  background-color: #303030;
+}
+
+.style-1::-webkit-scrollbar {
+  width: 6px;
+  background-color: #303030;
+}
+
+.style-1::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 0px rgba(236, 236, 236, 0.41);
+  background-color: #888888;
+}
+
+.style-1::-webkit-scrollbar-thumb:hover {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 0px rgba(236, 236, 236, 0.41);
+  background-color: #e2e2e2;
+}
+
 /**Invisible Scrollbar Style 4**/
 
 .style-4::-webkit-scrollbar-track {

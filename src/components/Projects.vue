@@ -88,7 +88,9 @@ const scrollDown = () => {
       <WebDevelopment v-if="state.projectType == 'web_development'" />
       <SystemDevelopment v-if="state.projectType == 'system_development'" />
       <WebDesign v-if="state.projectType == 'web_design'" />
-      <Modelling v-if="state.projectType == 'modelling'" />
+      <div :class="[state.projectType == 'modelling' ? 'visible' : 'hidden']">
+        <Modelling />
+      </div>
     </div>
   </section>
 </template>
