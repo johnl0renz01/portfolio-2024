@@ -85,7 +85,9 @@ const project = [
         </h1>
         <div class="flex flex-wrap gap-x-6 gap-y-4">
           <div class="inline-block py-1 px-3 bg-gray-700">Web Development</div>
-          <div class="inline-block py-1 px-3 bg-gray-700">Web Development</div>
+          <div class="inline-block py-1 px-3 bg-gray-700">
+            Web Developmentwew
+          </div>
           <div class="inline-block py-1 px-3 bg-gray-700">Web Development</div>
           <div class="inline-block py-1 px-3 bg-gray-700">Development</div>
         </div>
