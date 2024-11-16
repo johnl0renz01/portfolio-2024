@@ -1,22 +1,13 @@
 <script setup>
-import rodeotrip_thumbnail from '@/assets/projects/rodeotrip/thumbnail.png';
-import codedeity_thumbnail from '@/assets/projects/codedeity/thumbnail.png';
+import { RouterLink, useRoute } from 'vue-router';
+import data from '@/data/projects/systemdevelopment.js';
 
-const project = [
-  {
-    image: rodeotrip_thumbnail,
-    title: 'Rodeo Trip',
-    description:
-      'This system simplifies ticket booking, cancellations, and route inquiries, providing a quick and efficient way to secure reservations.',
-  },
+const project = data;
 
-  {
-    image: codedeity_thumbnail,
-    title: 'Code Deity',
-    description:
-      'Adventure game where players input commands, learning basic programming concepts while exploring various possibilities.',
-  },
-];
+const isActiveLink = routePath => {
+  const route = useRoute();
+  return route.path === routePath;
+};
 </script>
 
 <template>
@@ -38,10 +29,11 @@ const project = [
       <p class="">
         {{ item.description }}
       </p>
-      <a
-        href=""
+      <RouterLink
+        :to="'/details/' + item.name"
+        target="_blank"
         class="mt-2 text-[1rem] font-montserrat font-semibold underline"
-        >Explore</a
+        >Explore</RouterLink
       >
     </div>
   </div>

@@ -35,6 +35,7 @@ onMounted(async () => {
       break;
     }
   }
+  document.title = 'Project - ' + state.project.title;
 });
 </script>
 
@@ -48,10 +49,13 @@ onMounted(async () => {
 <template>
   <section
     id="projects"
-    class="flex flex-col bg min-h-screen text-white sm:px-6 lg:px-[25rem] py-20 pb-[10rem]"
+    class="flex flex-col bg min-h-screen text-white sm:px-6 lg:px-[24rem] py-20 pb-[10rem]"
   >
     <div class="">
-      <h1 class="text-[2rem] font-bold font-montserrat">Adaptive Sensei</h1>
+      <h1 class="text-[2rem] font-bold font-montserrat">
+        {{ state.project.title }}
+      </h1>
+      <div class="mt-1">{{ state.project.date }}</div>
     </div>
     <div class="lg:grid lg:grid-cols-3 h-full gap-y-10 py-4">
       <div class="relative col-span-2 pr-20">
@@ -59,15 +63,16 @@ onMounted(async () => {
       </div>
       <div class="relative flex flex-col gap-y-3 pl-20">
         <h1 class="text-[1.3rem] font-bold font-montserrat">Objective</h1>
-        <p class="">
+        <p class="whitespace-pre-wrap">
           {{ state.project.objective }}
         </p>
       </div>
+
       <div class="col-span-2 pr-20 pb-10">
         <h1 class="text-[1.3rem] mb-3 font-semibold font-montserrat">
           Tech Stack
         </h1>
-        <div class="flex flex-wrap gap-x-4 gap-y-4">
+        <div class="flex flex-wrap gap-x-2 gap-y-2">
           <div
             v-for="item in state.project.techstack"
             :key="item.id"
@@ -81,26 +86,44 @@ onMounted(async () => {
         <h1 class="text-[1.3rem] mb-3 font-semibold font-montserrat">
           {{ state.project.type }} Link
         </h1>
-        <a :href="state.project.link" target="_blank"
+        <a
+          v-if="state.project.link != ''"
+          :href="state.project.link"
+          target="_blank"
           ><button
             :class="[
-              'w-full text-[0.95rem] text-left py-1 px-3  font-montserrat ' +
-                state.project.linkColor,
+              'w-full text-[0.95rem] text-left py-1 px-3  font-montserrat truncate ' +
+                state.project.color,
             ]"
           >
             {{ state.project.link }}
           </button>
         </a>
-
         <div
-          class="mt-3 w-full text-[0.95rem] text-left py-1 px-3 bg-gray-700 font-montserrat"
+          v-else
+          class="mt-1 w-full text-[0.95rem] text-left py-1 px-3 text-gray-400 bg-gray-700 font-montserrat"
         >
-          username: {{ state.project.username }}
+          Not Available
         </div>
-        <div
-          class="mt-1 w-full text-[0.95rem] text-left py-1 px-3 bg-gray-700 font-montserrat"
-        >
-          password: {{ state.project.password }}
+        <div v-if="state.project.link != ''">
+          <div v-if="state.project.username != ''">
+            <div
+              class="mt-1 w-full text-[0.95rem] text-left py-1 px-3 bg-gray-700 font-montserrat"
+            >
+              username: {{ state.project.username }}
+            </div>
+            <div
+              class="mt-1 w-full text-[0.95rem] text-left py-1 px-3 bg-gray-700 font-montserrat"
+            >
+              password: {{ state.project.password }}
+            </div>
+          </div>
+          <div
+            v-else
+            class="mt-1 w-full text-[0.95rem] text-left py-1 px-3 text-gray-400 bg-gray-700 font-montserrat"
+          >
+            {{ state.project.linkType }} Mode
+          </div>
         </div>
       </div>
     </div>
@@ -132,7 +155,7 @@ onMounted(async () => {
           v-if="state.project.walkthrough == 'desktop'"
           :projectName="projectName"
         />
-        <Desktop
+        <Mobile
           v-if="state.project.walkthrough == 'mobile'"
           :projectName="projectName"
         />
