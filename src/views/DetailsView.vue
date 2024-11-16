@@ -1,24 +1,22 @@
 <script setup>
-import pia_thumbnail from '@/assets/projects/pia/thumbnail.png';
-import adaptive_thumbnail from '@/assets/projects/adaptive/thumbnail.png';
-import turo_thumbnail from '@/assets/projects/turo/thumbnail.png';
-
-import adaptive_landing from '@/assets/projects/adaptive/landing.png';
-
-import WalkthroughDesktop from '@/components/WalkthroughDesktop.vue';
-import WalkthroughMobile from '@/components/WalkthroughMobile.vue';
+import Desktop from '@/components/walkthrough/Desktop.vue';
+import Mobile from '@/components/walkthrough/Mobile.vue';
 
 import { reactive, defineProps, onMounted } from 'vue';
+import { useRoute, RouterLink, useRouter } from 'vue-router';
 
-import { RouterLink, useRoute } from 'vue-router';
+import dataProjects from '@/data/projects.js';
 
-const isActiveLink = routePath => {
-  const route = useRoute();
-  return route.path === routePath;
-};
+const projects = dataProjects;
+
+const route = useRoute();
+const router = useRouter();
+
+const projectName = route.params.name;
 
 const state = reactive({
   walkthrough: false,
+  project: [],
 });
 
 const toggleWalkthrough = () => {
@@ -30,14 +28,14 @@ const scrollDown = () => {
   window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
 };
 
-const project = [
-  {
-    image: adaptive_thumbnail,
-    title: 'Personal Instructive Agent',
-    description:
-      "The website enhances algebra learning by an emotional agent that responds to students' progress with expressions like happiness or sadness. The website enhances algebra learning by an emotional agent that responds to students' progress with expressions like happiness or sadness. ",
-  },
-];
+onMounted(async () => {
+  for (let i = 0; i < projects.length; i++) {
+    if (projectName == projects[i].name) {
+      state.project = projects[i];
+      break;
+    }
+  }
+});
 </script>
 
 <style scoped>
@@ -47,21 +45,6 @@ const project = [
 }
 </style>
 
-<!--
-NAVY COLOR
-
-<style scoped>
-.bg {
-  background: rgb(0, 56, 69);
-  background: linear-gradient(
-    180deg,
-    rgb(68, 68, 68) 0%,
-    rgba(0, 18, 22, 1) 100%
-  );
-}
-</style>
--->
-
 <template>
   <section
     id="projects"
@@ -70,21 +53,14 @@ NAVY COLOR
     <div class="">
       <h1 class="text-[2rem] font-bold font-montserrat">Adaptive Sensei</h1>
     </div>
-    <div
-      v-for="(item, index) in project"
-      :key="item.id"
-      :class="[
-        'lg:grid lg:grid-cols-3 h-full gap-y-10  py-4',
-        index == project.length - 1 ? '' : 'border-b-white border-b-[1px]',
-      ]"
-    >
+    <div class="lg:grid lg:grid-cols-3 h-full gap-y-10 py-4">
       <div class="relative col-span-2 pr-20">
-        <img class="h-full object-cover" :src="item.image" />
+        <img class="h-full object-cover" :src="state.project.image" />
       </div>
       <div class="relative flex flex-col gap-y-3 pl-20">
         <h1 class="text-[1.3rem] font-bold font-montserrat">Objective</h1>
         <p class="">
-          {{ item.description }}
+          {{ state.project.objective }}
         </p>
       </div>
       <div class="col-span-2 pr-20 pb-10">
@@ -92,33 +68,39 @@ NAVY COLOR
           Tech Stack
         </h1>
         <div class="flex flex-wrap gap-x-4 gap-y-4">
-          <div class="inline-block py-1 px-3 bg-gray-700">Web Development</div>
-          <div class="inline-block py-1 px-3 bg-gray-700">Web Development</div>
-          <div class="inline-block py-1 px-3 bg-gray-700">Web Development</div>
-          <div class="inline-block py-1 px-3 bg-gray-700">Development</div>
+          <div
+            v-for="item in state.project.techstack"
+            :key="item.id"
+            class="inline-block py-1 px-3 bg-gray-700"
+          >
+            {{ item.tech }}
+          </div>
         </div>
       </div>
       <div class="pl-20">
         <h1 class="text-[1.3rem] mb-3 font-semibold font-montserrat">
-          Website Link
+          {{ state.project.type }} Link
         </h1>
-        <a href="https://www.pia-sfe.live" target="_blank"
+        <a :href="state.project.link" target="_blank"
           ><button
-            class="w-full text-[0.95rem] text-left py-1 px-3 bg-[#86cc16c0] font-montserrat"
+            :class="[
+              'w-full text-[0.95rem] text-left py-1 px-3  font-montserrat ' +
+                state.project.linkColor,
+            ]"
           >
-            https://www.pia-sfe.live
+            {{ state.project.link }}
           </button>
         </a>
 
         <div
           class="mt-3 w-full text-[0.95rem] text-left py-1 px-3 bg-gray-700 font-montserrat"
         >
-          username: guest
+          username: {{ state.project.username }}
         </div>
         <div
           class="mt-1 w-full text-[0.95rem] text-left py-1 px-3 bg-gray-700 font-montserrat"
         >
-          password: 123456
+          password: {{ state.project.password }}
         </div>
       </div>
     </div>
@@ -146,7 +128,14 @@ NAVY COLOR
         </button>
       </a>
       <div :class="[state.walkthrough ? 'visible' : 'hidden']">
-        <WalkthroughDesktop />
+        <Desktop
+          v-if="state.project.walkthrough == 'desktop'"
+          :projectName="projectName"
+        />
+        <Desktop
+          v-if="state.project.walkthrough == 'mobile'"
+          :projectName="projectName"
+        />
       </div>
     </div>
   </section>
