@@ -1,7 +1,38 @@
 <script setup>
+import Album from '@/components/modal/Album.vue';
 import data from '@/data/projects/modelling.js';
+import dataAlbum from '@/data/modal/album.js';
+
+import { reactive, defineProps, onMounted } from 'vue';
+
+const state = reactive({
+  album: [],
+  showModal: false,
+});
 
 const project = data;
+const albumList = dataAlbum;
+
+const selectAlbum = albumName => {
+  for (let i = 0; i < albumList.length; i++) {
+    if (albumName == albumList[i].name) {
+      state.album = albumList[i];
+      break;
+    }
+  }
+};
+
+const check = () => {
+  if (state.showModal) {
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${window.scrollY}px`;
+  } else {
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  }
+};
 </script>
 
 <template>
@@ -13,9 +44,27 @@ const project = data;
           <h1 class="text-[1.2rem] font-bold font-montserrat">
             {{ item.title }}
           </h1>
-          <a href="" class="text-[0.9rem] font-montserrat underline">Album</a>
+          <button
+            id="show-modal"
+            @click="
+              selectAlbum(item.name);
+              state.showModal = true;
+            "
+            class="text-[0.9rem] font-montserrat underline"
+          >
+            Album
+          </button>
         </div>
       </div>
     </div>
   </div>
+
+  <Teleport to="body">
+    <Album
+      :album="state.album"
+      v-if="state.showModal"
+      @close="state.showModal = false"
+    >
+    </Album>
+  </Teleport>
 </template>

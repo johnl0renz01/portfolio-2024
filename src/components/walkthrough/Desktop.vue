@@ -23,7 +23,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="style-1 max-h-screen overflow-y-auto">
+  <div class="style-1 max-h-[calc(100vh-20vh)] overflow-y-auto">
     <div v-for="item in state.walkthrough.items" class="relative mb-16">
       <div class="absolute left-0 right-0 top-0 lg:grid lg:grid-cols-3 z-10">
         <div class="col-span-2">

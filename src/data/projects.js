@@ -1,8 +1,8 @@
 import pia_main from '@/assets/projects/pia/main.png';
-import adaptive_thumbnail from '@/assets/projects/adaptive/thumbnail.png';
+import adaptive_main from '@/assets/projects/adaptive/main.png';
 import turo_main from '@/assets/projects/turo/main.png';
-import rodeotrip_thumbnail from '@/assets/projects/rodeotrip/thumbnail.png';
-import codedeity_thumbnail from '@/assets/projects/codedeity/thumbnail.png';
+import rodeotrip_main from '@/assets/projects/rodeotrip/main.png';
+import codedeity_main from '@/assets/projects/codedeity/main.png';
 
 const projects = [
   {
@@ -35,11 +35,11 @@ const projects = [
   {
     name: 'adaptive-sensei',
     type: 'Website',
-    image: adaptive_thumbnail,
+    image: adaptive_main,
     title: 'Adaptive Sensei',
     date: 'May 2024 - July 2024',
     objective:
-      'A web-based system to optimize student understanding of linear equations through interactive lessons and adaptive learning tools.\n\nAdditionally, it seeks to support research in algebra education by collecting data on student performance, which can be used to refine teaching methods and inform future educational practices.',
+      'A mobile web-based system to optimize student understanding of linear equations through interactive lessons and adaptive learning tools.\n\nAdditionally, it seeks to support research in algebra education by collecting data on student performance, which can be used to refine teaching methods and inform future educational practices.',
     techstack: [
       { tech: 'HTML' },
       { tech: 'CSS' },
@@ -92,7 +92,7 @@ const projects = [
   {
     name: 'rodeo-trip',
     type: 'System',
-    image: rodeotrip_thumbnail,
+    image: rodeotrip_main,
     title: 'Rodeo Trip',
     date: 'Jan 2019 - Mar 2019',
     objective:
@@ -112,7 +112,7 @@ const projects = [
   {
     name: 'code-deity',
     type: 'System',
-    image: codedeity_thumbnail,
+    image: codedeity_main,
     title: 'Code Deity',
     date: 'Nov 2021 (Unfinished)',
     objective:
@@ -122,7 +122,7 @@ const projects = [
       { tech: 'Adobe Animate' },
       { tech: 'Macromedia / Adobe Flash' },
     ],
-    color: 'bg-[#45a7ee]',
+    color: 'bg-[#b77285]',
     link: 'https://drive.google.com/file/d/1wpmlMj0jx8HmU6bADu-2rVU-4RNA_XmL/view?usp=sharing',
     linkType: 'File',
     username: '',

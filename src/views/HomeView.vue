@@ -17,6 +17,24 @@ import Skills from '@/components/Skills.vue';
     rgba(0, 18, 22, 1) 100%
   );
 }
+
+/**
+.bg {
+  background: rgb(0, 56, 69);
+  background: linear-gradient(180deg, rgb(25, 25, 25) 0%, rgb(7, 7, 7) 100%);
+}
+
+
+.bg {
+  background: rgb(0, 56, 69);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 56, 69, 1) 0%,
+    rgba(0, 18, 22, 1) 100%
+  );
+}
+
+*/
 </style>
 
 <template>

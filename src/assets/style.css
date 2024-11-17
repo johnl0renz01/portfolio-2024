@@ -16,6 +16,10 @@ html {
   overflow-x: hidden;
 }
 
+:root:has(.no-doc-scroll) {
+  overflow: hidden;
+}
+
 @layer base {
   body {
     @apply font-jura;

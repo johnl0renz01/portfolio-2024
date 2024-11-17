@@ -8,11 +8,22 @@ import { reactive, defineProps, onMounted } from 'vue';
 
 const state = reactive({
   projectType: '',
+  previous: '',
 });
 
 const scrollDown = () => {
   var scrollDiv = document.getElementById('projects').offsetTop;
   window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+};
+
+const toggleProject = value => {
+  state.projectType = value;
+  if (state.previous != state.projectType) {
+    state.previous = state.projectType;
+  } else {
+    state.projectType = '';
+    state.previous = '';
+  }
 };
 </script>
 
@@ -34,7 +45,7 @@ const scrollDown = () => {
       >
         <a href="#projects" @click.prevent="scrollDown">
           <button
-            @click="state.projectType = 'web_development'"
+            @click="toggleProject('web_development')"
             :class="[
               'py-1 px-3 transition duration-50',
               state.projectType == 'web_development'
@@ -47,7 +58,7 @@ const scrollDown = () => {
         </a>
         <a href="#projects" @click.prevent="scrollDown">
           <button
-            @click="state.projectType = 'system_development'"
+            @click="toggleProject('system_development')"
             :class="[
               'py-1 px-3 transition duration-50',
               state.projectType == 'system_development'
@@ -60,7 +71,7 @@ const scrollDown = () => {
         </a>
         <a href="#projects" @click.prevent="scrollDown">
           <button
-            @click="state.projectType = 'web_design'"
+            @click="toggleProject('web_design')"
             :class="[
               'py-1 px-3 transition duration-50',
               state.projectType == 'web_design'
@@ -73,7 +84,7 @@ const scrollDown = () => {
         </a>
         <a href="#projects" @click.prevent="scrollDown">
           <button
-            @click="state.projectType = 'modelling'"
+            @click="toggleProject('modelling')"
             :class="[
               'py-1 px-3 transition duration-50',
               state.projectType == 'modelling'
