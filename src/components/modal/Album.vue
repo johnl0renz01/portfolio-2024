@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, defineProps } from 'vue';
+import { reactive, defineProps, onMounted } from 'vue';
 import { useCycleList } from '@vueuse/core';
 
 const props = defineProps({
@@ -55,15 +55,26 @@ document.onkeydown = function (e) {
     case 'ArrowRight':
       nextImage();
       break;
-    case 'Escape':
-      $emit('close');
-      break;
   }
 };
 </script>
 
+<script>
+export default {
+  mounted() {
+    this.$refs.modal.focus();
+  },
+};
+</script>
+
 <template>
-  <Transition name="modal" class="no-doc-scroll">
+  <Transition
+    name="modal"
+    class="no-doc-scroll"
+    tabindex="0"
+    ref="modal"
+    @keyup.esc="$emit('close')"
+  >
     <div
       class="fixed z-[100] top-0 left-0 w-full h-full bg-black flex transition-opacity ease-linear duration-200"
     >

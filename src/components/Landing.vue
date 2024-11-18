@@ -1,5 +1,14 @@
 <script setup>
 import fisherman from '@/assets/fisherman.png';
+
+/**
+ *  <h1 class="text-[4rem] leading-[4rem] font-kanit uppercase font-bold">
+          Super Long Text&nbsp;Here<br />
+          Another Text...
+        </h1>
+        <h6 class="text-[1.5rem]">Medium super long subtext here...</h6>
+        
+ */
 </script>
 
 <style scoped>
@@ -22,10 +31,12 @@ import fisherman from '@/assets/fisherman.png';
     >
       <div class="text-center">
         <h1 class="text-[4rem] leading-[4rem] font-kanit uppercase font-bold">
-          Super Long Text&nbsp;Here<br />
-          Another Text...
+          Rise with the Tide,<br />
+          Endure waves...
         </h1>
-        <h6 class="text-[1.5rem]">Medium super long subtext here...</h6>
+        <h6 class="text-[1.5rem] font-bold">
+          Never fear the storm, embrace the challenge...
+        </h6>
       </div>
     </div>
     <img

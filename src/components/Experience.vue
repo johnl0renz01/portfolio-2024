@@ -32,7 +32,7 @@ details:not([open]) summary::after {
       <p
         class="inline-block px-4 py-2 bg-normalshade font-montserrat text-2xl font-bold"
       >
-        Timeline
+        Background
       </p>
     </div>
     <div

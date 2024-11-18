@@ -2,7 +2,6 @@
 import dataEducation from '@/data/education.js';
 
 const education = dataEducation;
-
 </script>
 
 <style scoped>
