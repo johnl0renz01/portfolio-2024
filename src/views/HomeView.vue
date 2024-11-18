@@ -13,13 +13,12 @@ import Skills from '@/components/Skills.vue';
   background: rgb(0, 56, 69);
   background: linear-gradient(
     180deg,
-    rgba(0, 56, 69, 1) 0%,
+    rgba(0, 70, 70, 1) 0%,
     rgba(1, 20, 26, 1) 100%
   );
 }
 
 .bg2 {
-  background: rgb(0, 56, 69);
   background: linear-gradient(
     180deg,
     rgba(1, 20, 26, 1) 0%,
@@ -47,12 +46,20 @@ import Skills from '@/components/Skills.vue';
 </style>
 
 <template>
-  <Navbar />
-  <Landing />
-  <div class="bg">
-    <Experience id="background" />
-    <Education />
-    <Skills id="skills" />
+  <div class="relative">
+    <div class="z-[1]">
+      <Landing />
+      <Navbar />
+    </div>
+    <div class="absolute z-[2]">
+      <div class="relative bg">
+        <Experience id="background" />
+        <Education />
+        <Skills id="skills" />
+      </div>
+      <div class="bg2">
+        <Projects id="projects" />
+      </div>
+    </div>
   </div>
-  <div class="bg2"><Projects id="projects" /></div>
 </template>

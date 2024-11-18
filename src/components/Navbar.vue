@@ -4,7 +4,9 @@ import { RouterLink, useRoute } from 'vue-router';
 </script>
 
 <template>
-  <nav class="bg-transparent mx-auto sm:px-6 lg:px-12">
+  <nav
+    class="bg-transparent mx-auto sm:px-6 lg:px-12 absolute top-0 left-0 right-0"
+  >
     <div class="flex h-20 items-center justify-between">
       <div
         class="flex flex-1 items-center justify-center md:items-stretch md:justify-start"

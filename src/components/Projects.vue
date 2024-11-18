@@ -12,6 +12,8 @@ const state = reactive({
 });
 
 const scrollDown = () => {
+  //@click.prevent="scrollDown" removed from HTML
+
   var scrollDiv = document.getElementById('projects').offsetTop;
   window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
 };
@@ -43,7 +45,7 @@ const toggleProject = value => {
       <div
         class="flex justify-between flex-wrap gap-y-3 font-montserrat text-[1.1rem]"
       >
-        <a href="#projects" @click.prevent="scrollDown">
+        <a href="#projects">
           <button
             @click="toggleProject('web_development')"
             :class="[
@@ -56,7 +58,7 @@ const toggleProject = value => {
             Web Development
           </button>
         </a>
-        <a href="#projects" @click.prevent="scrollDown">
+        <a href="#projects">
           <button
             @click="toggleProject('system_development')"
             :class="[
@@ -69,7 +71,7 @@ const toggleProject = value => {
             System Development
           </button>
         </a>
-        <a href="#projects" @click.prevent="scrollDown">
+        <a href="#projects">
           <button
             @click="toggleProject('web_design')"
             :class="[
@@ -82,7 +84,7 @@ const toggleProject = value => {
             Web Design
           </button>
         </a>
-        <a href="#projects" @click.prevent="scrollDown">
+        <a href="#projects">
           <button
             @click="toggleProject('modelling')"
             :class="[
