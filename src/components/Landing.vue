@@ -261,6 +261,7 @@ onMounted(() => {
       class="absolute m-auto right-0 left-5 h-[200px] z-[1]"
       :src="fisherman"
     />
+    <div id="center" class="absolute top-[14rem]"></div>
     <div
       class="relative overflow-hidden w-full h-full flex justify-center items-center -mt-10 pb-[10rem]"
     >
@@ -300,7 +301,6 @@ onMounted(() => {
         </h6>
       </div>
 
-      <div id="center" class="absolute top-[14rem]"></div>
       <img
         id="fish1"
         :src="fish_1"

@@ -99,19 +99,37 @@ export default {
 
         <div class="overflow-y-auto">
           <div class="relative bg-gray-500 text-white">
-            <button
-              @click="previousImage"
-              class="absolute top-0 bottom-0 left-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-2 pr-3 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1]"
+            <a
+              :href="[
+                '#image' +
+                  (dynamic.imgIndex + 1 == 0
+                    ? dynamic.imgs.length
+                    : dynamic.imgIndex + 1),
+              ]"
             >
-              <span class="flex flex-row items-center"><</span>
-            </button>
+              <button
+                @click="previousImage"
+                class="absolute top-0 bottom-0 left-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-2 pr-3 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1]"
+              >
+                <span class="flex flex-row items-center"><</span>
+              </button>
+            </a>
             <img class="h-[40rem] w-full object-cover" :src="state" alt="" />
-            <button
-              @click="nextImage"
-              class="absolute top-0 bottom-0 right-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-3 pr-2 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1] z-[9999]"
+            <a
+              :href="[
+                '#image' +
+                  (dynamic.imgIndex == dynamic.imgs.length
+                    ? 1
+                    : dynamic.imgIndex + 1),
+              ]"
             >
-              <span class="flex flex-row items-center h-full">></span>
-            </button>
+              <button
+                @click="nextImage"
+                class="absolute top-0 bottom-0 right-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-3 pr-2 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1] z-[9999]"
+              >
+                <span class="flex flex-row items-center h-full">></span>
+              </button>
+            </a>
           </div>
 
           <!-- <div v-for="(item, index) in state" :key="item.id">
@@ -131,16 +149,18 @@ export default {
             :key="item.id"
             class="inline-block"
           >
-            <img
-              @click="goToImage(index)"
-              :class="[
-                'h-[5rem] p-1.5 cursor-pointer transition duration-50',
-                index == dynamic.imgIndex
-                  ? ' border-[1px] border-white '
-                  : 'border-b-[1px] border-b-white/0 hover:border-b-white',
-              ]"
-              :src="[item.image]"
-            />
+            <a :id="['image' + (index + 1)]" :href="['#image' + (index + 1)]">
+              <img
+                @click="goToImage(index)"
+                :class="[
+                  'h-[5rem] mr-4 p-1.5 cursor-pointer transition duration-50',
+                  index == dynamic.imgIndex
+                    ? ' border-[1px] border-white '
+                    : 'border-b-[1px] border-b-white/0 hover:border-b-white',
+                ]"
+                :src="[item.image]"
+              />
+            </a>
           </div>
         </div>
       </div>

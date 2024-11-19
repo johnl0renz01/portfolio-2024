@@ -20,7 +20,7 @@ const isActiveLink = routePath => {
     ]"
   >
     <div class="relative">
-      <img class="h-full" :src="item.image" />
+      <img class="h-full w-full object-cover" :src="item.image" />
     </div>
     <div class="relative flex flex-col gap-y-3">
       <h1
