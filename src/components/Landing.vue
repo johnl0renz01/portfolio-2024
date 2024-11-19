@@ -96,6 +96,7 @@ onMounted(() => {
 
     text1.style.opacity = text1_opacity;
     text2.style.opacity = text2_opacity;
+    text3.style.opacity = text3_opacity;
 
     text1.style.scale = text1_scale;
     text2.style.scale = text2_scale;
