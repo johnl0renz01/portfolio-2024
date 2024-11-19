@@ -32,7 +32,7 @@ const toggleProject = value => {
 <template>
   <section
     id="projects"
-    class="flex flex-col bg-transparent text-white sm:px-6 lg:px-[23rem] py-10 pb-[10rem]"
+    class="flex flex-col bg-transparent text-white xl:px-[23rem] py-10 pb-[10rem]"
   >
     <div class="mb-10 text-center">
       <p
@@ -41,9 +41,9 @@ const toggleProject = value => {
         Projects
       </p>
     </div>
-    <div class="px-52">
+    <div class="xs:px-16 sm:px-52">
       <div
-        class="flex justify-between flex-wrap gap-y-3 font-montserrat text-[1.1rem]"
+        class="flex lg:justify-between xs:justify-center gap-x-2 gap-y-3 font-montserrat xs:text-[0.8rem] sm:text-[1rem] lg:text-[1.1rem]"
       >
         <a href="#projects">
           <button

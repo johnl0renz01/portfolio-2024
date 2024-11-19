@@ -24,7 +24,7 @@ const bgColor = '#206873';
 
 <template>
   <section
-    class="flex flex-col min-h-screen bg-transparent text-white sm:px-6 lg:px-[23rem] py-10 pb-20"
+    class="flex flex-col min-h-screen bg-transparent text-white xs:px-6 sm:px-16 xl:px-[23rem] py-10 pb-20"
   >
     <div class="mb-10 relative w-full text-center">
       <div
@@ -39,9 +39,11 @@ const bgColor = '#206873';
       :key="skill.id"
     >
       <div class="mb-8">
-        <h1 class="mb-6 text-[2rem]">{{ skill.type }}</h1>
+        <h1 class="mb-6 xs:text-[1.75rem]">
+          {{ skill.type }}
+        </h1>
         <div
-          class="flex flex-wrap justify-center w-full h-full gap-x-0 gap-y-16"
+          class="flex flex-wrap justify-center w-full h-full gap-x-0 xs:gap-y-4 lg:gap-y-16 xs:scale-90 lg:scale-100"
         >
           <div class="flex" v-for="details in skill.tool" :key="details.id">
             <div :class="['border-b-[0.5rem] ' + details.border]">

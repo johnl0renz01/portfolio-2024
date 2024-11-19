@@ -101,7 +101,11 @@ onMounted(() => {
   <div
     :class="['z-0 relative w-full sm:px-6 lg:px-12  pb-24 text-darkshade  ']"
   >
-    <img id="sky" class="absolute scale-x-[10] h-full" :src="sky" />
+    <img
+      id="sky"
+      class="absolute scale-x-[10] h-full w-full object-cover"
+      :src="sky"
+    />
 
     <div
       class="relative min-h-[calc(100vh-20vh)] max-h-[calc(100vh-10vh)] flex items-center justify-center"

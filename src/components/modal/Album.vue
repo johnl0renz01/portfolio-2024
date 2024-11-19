@@ -76,13 +76,13 @@ export default {
     @keyup.esc="$emit('close')"
   >
     <div
-      class="fixed z-[100] top-0 left-0 w-full h-full bg-black flex transition-opacity ease-linear duration-200"
+      class="overflow-y-auto fixed z-[100] top-0 left-0 w-full h-full bg-black flex transition-opacity ease-linear duration-200"
     >
       <div
-        class="min-h-screen max-h-screen text-center flex flex-col gap-y-2 w-full mx-[20rem] mt-6 overflow-hidden p-4 transition ease-linear shadow-[0_2px_8px_0px_rgba(0,0,0,0.3)]"
+        class="min-h-screen text-center flex flex-col gap-y-2 w-full lg:mx-[10rem] xl:mx-[20rem] mt-6 p-4 transition ease-linear shadow-[0_2px_8px_0px_rgba(0,0,0,0.3)]"
       >
         <div
-          class="relative flex justify-center items-center font-montserrat text-white text-[1.5rem] font-bold"
+          class="relative flex justify-center items-center font-montserrat text-white xs:text-[1.25rem] lg:text-[1.5rem] font-bold"
         >
           <div>
             {{ props.album.title }}
@@ -97,18 +97,18 @@ export default {
           </div>
         </div>
 
-        <div class="">
+        <div class="overflow-y-auto">
           <div class="relative bg-gray-500 text-white">
             <button
               @click="previousImage"
-              class="absolute top-0 bottom-0 left-0 block bg-black/40 h-full text-[3rem] pl-2 pr-3 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1]"
+              class="absolute top-0 bottom-0 left-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-2 pr-3 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1]"
             >
               <span class="flex flex-row items-center"><</span>
             </button>
             <img class="h-[40rem] w-full object-cover" :src="state" alt="" />
             <button
               @click="nextImage"
-              class="absolute top-0 bottom-0 right-0 block bg-black/40 h-full text-[3rem] pl-3 pr-2 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1] z-[9999]"
+              class="absolute top-0 bottom-0 right-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-3 pr-2 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1] z-[9999]"
             >
               <span class="flex flex-row items-center h-full">></span>
             </button>
@@ -117,12 +117,13 @@ export default {
           <!-- <div v-for="(item, index) in state" :key="item.id">
             <img v-if="index == dynamic.imgIndex" :src="[item]" />
           </div>-->
-
-          <div class="flex items-center mt-2 mb-2">
-            <div class="grow mr-2 border-b-2 border-white"></div>
-            <h1 class="text-xl text-white">{{ dynamic.imgName }}</h1>
-            <div class="grow ml-2 border-b-2 border-white"></div>
-          </div>
+        </div>
+        <div class="flex items-center mt-2 mb-2">
+          <div class="grow mr-2 border-b-2 border-white"></div>
+          <h1 class="xs:text-lg lg:text-xl text-white">
+            {{ dynamic.imgName }}
+          </h1>
+          <div class="grow ml-2 border-b-2 border-white"></div>
         </div>
         <div class="whitespace-nowrap overflow-hidden text-white">
           <div

@@ -23,16 +23,18 @@ const isActiveLink = routePath => {
       <img class="h-full" :src="item.image" />
     </div>
     <div class="relative flex flex-col gap-y-3">
-      <h1 class="text-[1.5rem] font-bold font-montserrat">
+      <h1
+        class="xs:text-[1.25rem] lg:text-[1.5rem] xs:pt-4 lg:pt-0 font-bold font-montserrat"
+      >
         {{ item.title }}
       </h1>
-      <p class="">
+      <p class="xs:text-[0.925rem] xs:leading-[1.25rem] lg:text-base">
         {{ item.description }}
       </p>
       <RouterLink
         :to="'/details/' + item.name"
         target="_blank"
-        class="mt-2 text-[1rem] font-montserrat font-semibold underline"
+        class="mt-2 xs:text-[0.9rem] lg:text-[1rem] font-montserrat font-semibold underline"
         >Explore</RouterLink
       >
     </div>

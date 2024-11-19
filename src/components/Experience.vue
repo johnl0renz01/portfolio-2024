@@ -22,12 +22,19 @@ details[open] summary::after {
 details:not([open]) summary::after {
   content: attr(data-close);
 }
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+details > summary::-webkit-details-marker /* Safari */ {
+  display: none;
+}
 </style>
 
 <template>
-  <section
-    class="flex flex-col bg-transparent text-white sm:px-6 lg:px-[23rem] pt-10"
-  >
+  <section class="flex flex-col text-white sm:px-16 xl:px-[23rem] pt-10">
     <div class="mb-10 text-center">
       <p
         class="inline-block px-4 py-2 bg-normalshade font-montserrat text-2xl font-bold"
@@ -41,14 +48,14 @@ details:not([open]) summary::after {
       class="relative"
     >
       <div
-        class="absolute left-0 right-0 top-3.5 lg:grid lg:grid-cols-2 h-[5px]"
+        class="absolute left-0 right-0 top-3.5 xs:hidden lg:grid lg:grid-cols-2 h-[5px]"
       >
         <div class="border-r-[10px] border-r-white/80"></div>
         <div class="border-l-[10px] border-l-white/80"></div>
       </div>
-      <div class="lg:grid lg:grid-cols-2 h-full text-[1rem]">
+      <div class="lg:grid lg:grid-cols-2 h-full text-[1rem] xs:px-16 lg:px-0">
         <div
-          class="relative pr-20 border-r-[1px] border-r-gray-100/40 font-montserrat text-[1.4rem] font-bold drop-shadow text-right pl-[25%]"
+          class="relative border-r-[1px] xs:border-l-[1px] lg:border-l-0 border-gray-100/40 font-montserrat text-[1.4rem] font-bold drop-shadow xs:text-center lg:text-right lg:pl-[25%] lg:pr-20"
         >
           <ul>
             <li>
@@ -69,7 +76,7 @@ details:not([open]) summary::after {
         </div>
 
         <div
-          class="relative pl-20 border-l-[1px] border-l-gray-100/40 pb-16 pr-[45%]"
+          class="relative xs:text-justify lg:text-left lg:pl-20 xs:pt-10 lg:pt-0 pb-16 lg:pr-[45%] lg:border-l-[1px] border-gray-100/40"
         >
           <ul class="space-y-2 drop-shadow">
             <li
@@ -88,7 +95,7 @@ details:not([open]) summary::after {
             </li>
             <details>
               <summary
-                class="font-nunito drop-shadow-none underline font-bold shadow-xs mb-2"
+                class="xs:text-center lg:text-left font-nunito drop-shadow-none underline font-bold shadow-xs mb-2"
                 data-open="Minimize"
                 data-close="Expand"
               ></summary>

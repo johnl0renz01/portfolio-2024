@@ -10,6 +10,11 @@ export default {
       roman: 'upper-roman',
     },
     extend: {
+      screens: {
+        abt: '1160px',
+        xl: '1601px',
+        xs: '0px',
+      },
       colors: {
         transparent: 'transparent',
         darkshade: '#004040',

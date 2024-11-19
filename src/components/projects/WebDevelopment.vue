@@ -15,24 +15,26 @@ const isActiveLink = routePath => {
     v-for="(item, index) in project"
     :key="item.id"
     :class="[
-      'lg:grid lg:grid-cols-2 h-full gap-x-6 gap-y-20  py-20',
+      'lg:grid lg:grid-cols-2 h-full lg:gap-x-6 gap-y-20  py-20',
       index == project.length - 1 ? '' : 'border-b-white border-b-[1px]',
     ]"
   >
     <div class="relative">
-      <img class="h-full" :src="item.image" />
+      <img class="h-full w-full object-cover" :src="item.image" />
     </div>
     <div class="relative flex flex-col gap-y-3">
-      <h1 class="text-[1.5rem] font-bold font-montserrat">
+      <h1
+        class="xs:text-[1.25rem] lg:text-[1.5rem] xs:pt-4 lg:pt-0 font-bold font-montserrat"
+      >
         {{ item.title }}
       </h1>
-      <p class="">
+      <p class="xs:text-[0.925rem] xs:leading-[1.25rem] lg:text-base">
         {{ item.description }}
       </p>
       <RouterLink
         :to="'/details/' + item.name"
         target="_blank"
-        class="mt-2 text-[1rem] font-montserrat font-semibold underline"
+        class="mt-2 xs:text-[0.9rem] lg:text-[1rem] font-montserrat font-semibold underline"
         >Explore</RouterLink
       >
     </div>

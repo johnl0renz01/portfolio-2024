@@ -23,12 +23,12 @@ const project = data;
         >
           <h1
             v-if="indexPage == 0"
-            class="text-[1.5rem] font-montserrat font-semibold"
+            class="xs:text-[1.2rem] lg:text-[1.5rem] font-montserrat font-semibold"
           >
             {{ item.title }}
           </h1>
           <h1
-            class="text-[1rem] bg-normalshade inline-block px-3 py-1 font-montserrat"
+            class="xs:text-[0.8rem] lg:text-[1rem] bg-normalshade inline-block px-3 py-1 font-montserrat"
           >
             {{ page.name }} Page
           </h1>

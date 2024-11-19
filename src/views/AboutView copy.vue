@@ -12,7 +12,7 @@
     class="bg-transparent text-black xs:px-6 sm:px-16 xl:px-[20rem] xs:pb-20 abt:pb-0"
   >
     <div
-      class="abt:grid abt:grid-cols-2 abt:gap-x-16 abt:place-items-start abt:py-10"
+      class="abt:grid abt:grid-cols-2 xl:grid-cols-3 abt:gap-x-16 abt:place-items-start abt:py-10"
     >
       <div class="flex justify-center max-h-[44rem] overflow-hidden">
         <img
@@ -21,7 +21,7 @@
           alt=""
         />
       </div>
-      <div class="">
+      <div class="xl:col-span-2">
         <h1
           class="xs:text-[2.25rem] abt:text-[2.5rem] xl:text-[3.25rem] xs:text-center abt:text-left font-semibold font-kanit xs:mt-6 abt:mt-0 mb-6 abt:mb-2"
         >
@@ -32,24 +32,25 @@
             class="font-montserrat mb-12 xs:text-[1.1rem] abt:text-[1.4rem] font-bold"
           >
             <ul
-              class="xs:grid xs:grid-cols-2 xs:text-center sm:px-10 abt:px-0 abt:hidden block xl:text-left xl:flex xl:flex-row abt:gap-x-4"
+              class="xs:grid xs:grid-cols-2 xs:text-center sm:px-10 abt:px-0 abt:hidden block xl:text-left xl:flex abt:gap-x-4"
             >
               <li
                 class="abt:border-r-2 border-black/50 xs:px-2 abt:px-0 abt:pr-5"
               >
-                Full-Stack Developer
+                Full-Stack <br />Developer
               </li>
               <li
                 class="abt:border-r-2 border-black/50 xs:px-2 abt:px-0 abt:pr-5"
               >
-                Creative Artist
+                Creative<br />
+                Artist
               </li>
               <li
                 class="abt:border-r-2 border-black/50 xs:px-2 abt:px-0 abt:pr-5"
               >
-                Passionate Learner
+                Passionate<br />Learner
               </li>
-              <li class="border-black/50">Tech Enthusiast</li>
+              <li class="border-black/50">Tech<br />Enthusiast</li>
             </ul>
             <div class="hidden abt:flex xl:hidden flex-wrap gap-x-5">
               <div class="border-r-2 border-black pr-5">
