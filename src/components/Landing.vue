@@ -128,55 +128,58 @@ onMounted(() => {
       const text1_scale_speed = 0.0015;
       const text1_scale_limit = 1.379;
       const text1_pos_speed = 0.8;
-      const text1_pos_limit = 780;
+      const text1_pos_limit = 650;
+      if (text1_pos + value * text1_pos_speed <= 1000) {
+        if (text1_deg - value * text1_deg_speed <= -0) {
+          text1.style.opacity = text1_opacity + value * 0.002; //multiplier
+          text1_msg.style.transform = 'rotateX(' + 0 + 'deg)';
 
-      if (text1_deg - value * text1_deg_speed <= -0) {
-        text1.style.opacity = text1_opacity + value * 0.002; //multiplier
-        text1_msg.style.transform = 'rotateX(' + 0 + 'deg)';
-
-        if (text1_pos + value * text1_pos_speed >= text1_pos_limit) {
-          text1.style.scale = text1_scale_limit - (value - 1122) * 0.005; //1122 limit when to collapse,   0.005 custom multiplier
-        } else if (
-          text1_scale + value * text1_scale_speed >= text1_scale_limit &&
-          text1_pos + value * text1_pos_speed < text1_pos_limit
-        ) {
-          text1.style.scale = text1_scale_limit;
+          if (text1_pos + value * text1_pos_speed >= text1_pos_limit) {
+            text1.style.scale = text1_scale_limit - (value - 1155) * 0.005; //1122 limit when to collapse,   0.005 custom multiplier
+          } else if (
+            text1_scale + value * text1_scale_speed >= text1_scale_limit &&
+            text1_pos + value * text1_pos_speed < text1_pos_limit
+          ) {
+            text1.style.scale = text1_scale_limit;
+          } else {
+            text1.style.scale = text1_scale + value * text1_scale_speed;
+          }
         } else {
+          text1.style.opacity = text1_opacity + value * 0.001; //multiplier
           text1.style.scale = text1_scale + value * text1_scale_speed;
+          text1_msg.style.transform =
+            'rotateX(' + (text1_deg - value * text1_deg_speed) + 'deg)';
         }
-      } else {
-        text1.style.opacity = text1_opacity + value * 0.001; //multiplier
-        text1.style.scale = text1_scale + value * text1_scale_speed;
-        text1_msg.style.transform =
-          'rotateX(' + (text1_deg - value * text1_deg_speed) + 'deg)';
       }
 
       const text2_deg_speed = 0.075;
       const text2_scale_speed = 0.00125;
       const text2_scale_limit = 1.26;
       const text2_pos_speed = 0.95;
-      const text2_pos_limit = 850;
+      const text2_pos_limit = 750;
 
-      if (text2_deg - value * text2_deg_speed <= -0) {
-        text2.style.opacity = text2_opacity + value * 0.002;
-        text2_msg.style.transform = 'rotateX(' + 0 + 'deg)';
-        text3.style.opacity = 0;
-        if (text2_pos + value * text2_pos_speed >= text2_pos_limit) {
-          text2.style.scale = text2_scale_limit - (value - 1245) * 0.0025;
-        } else if (
-          text2_scale + value * text2_scale_speed >= text2_scale_limit &&
-          text2_pos + value * text2_pos_speed < text2_pos_limit
-        ) {
-          text2.style.scale = text2_scale_limit;
-          text3.style.opacity = 1;
+      if (text2_pos + value * text2_pos_speed <= 1000) {
+        if (text2_deg - value * text2_deg_speed <= -0) {
+          text2.style.opacity = text2_opacity + value * 0.002;
+          text2_msg.style.transform = 'rotateX(' + 0 + 'deg)';
+          text3.style.opacity = 0;
+          if (text2_pos + value * text2_pos_speed >= text2_pos_limit) {
+            text2.style.scale = text2_scale_limit - (value - 1205) * 0.0025;
+          } else if (
+            text2_scale + value * text2_scale_speed >= text2_scale_limit &&
+            text2_pos + value * text2_pos_speed < text2_pos_limit
+          ) {
+            text2.style.scale = text2_scale_limit;
+            text3.style.opacity = 1;
+          } else {
+            text2.style.scale = text2_scale + value * text2_scale_speed;
+          }
         } else {
+          text2.style.opacity = text2_opacity + value * 0.001;
           text2.style.scale = text2_scale + value * text2_scale_speed;
+          text2_msg.style.transform =
+            'rotateX(' + (text2_deg - value * text2_deg_speed) + 'deg)';
         }
-      } else {
-        text2.style.opacity = text2_opacity + value * 0.001;
-        text2.style.scale = text2_scale + value * text2_scale_speed;
-        text2_msg.style.transform =
-          'rotateX(' + (text2_deg - value * text2_deg_speed) + 'deg)';
       }
 
       text1.style.top = text1_pos + value * 0.975 + 'px';
@@ -220,9 +223,7 @@ onMounted(() => {
 </style>
 
 <template>
-  <div
-    :class="['z-0 relative w-full sm:px-6 lg:px-12  pb-24 text-darkshade  ']"
-  >
+  <div :class="['z-0 relative w-full sm:px-6 lg:px-12  pb-24 text-darkshade ']">
     <div id="sky" class="absolute h-[1392px] w-[8832px] scale-x-[2]">
       <img class="h-full w-full" :src="sky" />
     </div>
@@ -254,90 +255,91 @@ onMounted(() => {
     />
     -->
   </div>
-  <div
-    id="main"
-    class="bg-color relative w-full h-full flex justify-center items-center -mt-10 pb-[10rem]"
-  >
+  <div id="main" class="bg-color relative">
     <img
       id="fisherman"
       class="absolute m-auto right-0 left-5 h-[200px] z-[1]"
       :src="fisherman"
     />
-    <img
-      id="ocean"
-      class="min-h-[1120px] xl:min-h-[1120px] w-full"
-      :src="ocean"
-    />
+    <div
+      class="relative overflow-hidden w-full h-full flex justify-center items-center -mt-10 pb-[10rem]"
+    >
+      <img
+        id="ocean"
+        class="min-h-[1120px] xl:min-h-[1120px] w-full"
+        :src="ocean"
+      />
 
-    <img
-      id="corals1"
-      :src="corals_1"
-      class="h-[326px] w-full object-cover absolute"
-    />
+      <img
+        id="corals1"
+        :src="corals_1"
+        class="h-[326px] w-full object-cover absolute"
+      />
 
-    <img
-      id="corals2"
-      :src="corals_2"
-      class="h-[496px] w-full object-cover absolute"
-    />
+      <img
+        id="corals2"
+        :src="corals_2"
+        class="h-[496px] w-full object-cover absolute"
+      />
 
-    <div id="text2" class="text-center text-white absolute z-[9]">
-      <div id="text2_container" class="relative">
-        <h1
-          id="text2_msg"
-          class="xs:text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] xs:leading-[2.5rem] sm:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] font-kanit uppercase font-bold"
-        >
-          Rise with the Tide
-        </h1>
+      <div id="text2" class="text-center text-white absolute z-[9]">
+        <div id="text2_container" class="relative">
+          <h1
+            id="text2_msg"
+            class="xs:text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] xs:leading-[2.5rem] sm:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] font-kanit uppercase font-bold"
+          >
+            Rise with the Tide
+          </h1>
+        </div>
       </div>
-    </div>
-    <div id="text3" class="text-center text-white absolute z-10">
-      <h6
-        class="mt-2 xs:text-[1.3rem] lg:text-[1.4rem] xl:text-[1.5rem] font-bold"
-      >
-        Never fear the storm, embrace&nbsp;the&nbsp;challenge...
-      </h6>
-    </div>
-
-    <div id="center" class="absolute top-[14rem]"></div>
-    <img
-      id="fish1"
-      :src="fish_1"
-      class="h-[188px] w-[308px] object-cover absolute top-[22.5rem]"
-    />
-    <img
-      id="fish2"
-      :src="fish_2"
-      class="h-[217px] w-[357px] object-cover absolute top-[25rem]"
-    />
-    <img
-      id="fish3"
-      :src="fish_3"
-      class="h-[226px] w-[337px] object-cover absolute bottom-[20rem]"
-    />
-    <img
-      id="fish4"
-      :src="fish_4"
-      class="h-[282px] w-[380px] object-cover absolute bottom-[20rem]"
-    />
-    <img
-      id="corals3"
-      :src="corals_3"
-      class="h-[540px] w-full object-cover absolute"
-    />
-    <img
-      id="corals4"
-      :src="corals_4"
-      class="h-[1500px] w-full object-cover absolute z-10"
-    />
-    <div id="text1" class="text-center text-white absolute z-[9]">
-      <div id="text1_container" class="relative">
-        <h1
-          id="text1_msg"
-          class="xs:text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] xs:leading-[2.5rem] sm:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] font-kanit uppercase font-bold"
+      <div id="text3" class="text-center text-white absolute z-10">
+        <h6
+          class="mt-2 xs:text-[1.3rem] lg:text-[1.4rem] xl:text-[1.5rem] font-bold"
         >
-          Endure waves
-        </h1>
+          Never fear the storm, embrace&nbsp;the&nbsp;challenge...
+        </h6>
+      </div>
+
+      <div id="center" class="absolute top-[14rem]"></div>
+      <img
+        id="fish1"
+        :src="fish_1"
+        class="h-[188px] w-[308px] object-cover absolute top-[22.5rem]"
+      />
+      <img
+        id="fish2"
+        :src="fish_2"
+        class="h-[217px] w-[357px] object-cover absolute top-[25rem]"
+      />
+      <img
+        id="fish3"
+        :src="fish_3"
+        class="h-[226px] w-[337px] object-cover absolute bottom-[20rem]"
+      />
+      <img
+        id="fish4"
+        :src="fish_4"
+        class="h-[282px] w-[380px] object-cover absolute bottom-[20rem]"
+      />
+      <img
+        id="corals3"
+        :src="corals_3"
+        class="h-[540px] w-full object-cover absolute"
+      />
+      <img
+        id="corals4"
+        :src="corals_4"
+        class="h-[1500px] w-full object-cover absolute z-10"
+      />
+      <div id="text1" class="text-center text-white absolute">
+        <div id="text1_container" class="relative">
+          <h1
+            id="text1_msg"
+            class="xs:text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] xs:leading-[2.5rem] sm:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] font-kanit uppercase font-bold"
+          >
+            Endure waves
+          </h1>
+        </div>
       </div>
     </div>
   </div>
