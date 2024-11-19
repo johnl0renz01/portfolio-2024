@@ -51,7 +51,7 @@ import Skills from '@/components/Skills.vue';
       <Landing />
       <Navbar />
     </div>
-    <div class="absolute left-0 right-0 z-[2]">
+    <div class="absolute left-0 right-0 z-[20]">
       <div class="relative bg">
         <Experience id="background" />
         <Education />
