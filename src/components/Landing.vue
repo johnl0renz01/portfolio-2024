@@ -129,27 +129,28 @@ onMounted(() => {
       const text1_scale_limit = 1.379;
       const text1_pos_speed = 0.8;
       const text1_pos_limit = 650;
-      if (text1_pos + value * text1_pos_speed <= 1000) {
-        if (text1_deg - value * text1_deg_speed <= -0) {
-          text1.style.opacity = text1_opacity + value * 0.002; //multiplier
-          text1_msg.style.transform = 'rotateX(' + 0 + 'deg)';
 
-          if (text1_pos + value * text1_pos_speed >= text1_pos_limit) {
-            text1.style.scale = text1_scale_limit - (value - 1155) * 0.005; //1122 limit when to collapse,   0.005 custom multiplier
-          } else if (
-            text1_scale + value * text1_scale_speed >= text1_scale_limit &&
-            text1_pos + value * text1_pos_speed < text1_pos_limit
-          ) {
-            text1.style.scale = text1_scale_limit;
-          } else {
-            text1.style.scale = text1_scale + value * text1_scale_speed;
-          }
-        } else {
-          text1.style.opacity = text1_opacity + value * 0.001; //multiplier
-          text1.style.scale = text1_scale + value * text1_scale_speed;
+      if (text1_deg - value * text1_deg_speed <= -0) {
+        text1.style.opacity = text1_opacity + value * 0.002; //multiplier
+        text1_msg.style.transform = 'rotateX(' + 0 + 'deg)';
+
+        if (text1_pos + value * text1_pos_speed >= text1_pos_limit) {
+          text1.style.scale = text1_scale_limit - (value - 1155) * 0.005; //1122 limit when to collapse,   0.005 custom multiplier
           text1_msg.style.transform =
-            'rotateX(' + (text1_deg - value * text1_deg_speed) + 'deg)';
+            'rotateX(' + (0 - Math.abs(value - 1161) * 0.25) + 'deg)';
+        } else if (
+          text1_scale + value * text1_scale_speed >= text1_scale_limit &&
+          text1_pos + value * text1_pos_speed < text1_pos_limit
+        ) {
+          text1.style.scale = text1_scale_limit;
+        } else {
+          text1.style.scale = text1_scale + value * text1_scale_speed;
         }
+      } else {
+        text1.style.opacity = text1_opacity + value * 0.001; //multiplier
+        text1.style.scale = text1_scale + value * text1_scale_speed;
+        text1_msg.style.transform =
+          'rotateX(' + (text1_deg - value * text1_deg_speed) + 'deg)';
       }
 
       const text2_deg_speed = 0.075;
@@ -158,28 +159,28 @@ onMounted(() => {
       const text2_pos_speed = 0.95;
       const text2_pos_limit = 750;
 
-      if (text2_pos + value * text2_pos_speed <= 1000) {
-        if (text2_deg - value * text2_deg_speed <= -0) {
-          text2.style.opacity = text2_opacity + value * 0.002;
-          text2_msg.style.transform = 'rotateX(' + 0 + 'deg)';
-          text3.style.opacity = 0;
-          if (text2_pos + value * text2_pos_speed >= text2_pos_limit) {
-            text2.style.scale = text2_scale_limit - (value - 1205) * 0.0025;
-          } else if (
-            text2_scale + value * text2_scale_speed >= text2_scale_limit &&
-            text2_pos + value * text2_pos_speed < text2_pos_limit
-          ) {
-            text2.style.scale = text2_scale_limit;
-            text3.style.opacity = 1;
-          } else {
-            text2.style.scale = text2_scale + value * text2_scale_speed;
-          }
-        } else {
-          text2.style.opacity = text2_opacity + value * 0.001;
-          text2.style.scale = text2_scale + value * text2_scale_speed;
+      if (text2_deg - value * text2_deg_speed <= -0) {
+        text2.style.opacity = text2_opacity + value * 0.002;
+        text2_msg.style.transform = 'rotateX(' + 0 + 'deg)';
+        text3.style.opacity = 0;
+        if (text2_pos + value * text2_pos_speed >= text2_pos_limit) {
+          text2.style.scale = text2_scale_limit - (value - 1205) * 0.0025;
           text2_msg.style.transform =
-            'rotateX(' + (text2_deg - value * text2_deg_speed) + 'deg)';
+            'rotateX(' + (0 - Math.abs(value - 1215) * 0.2) + 'deg)';
+        } else if (
+          text2_scale + value * text2_scale_speed >= text2_scale_limit &&
+          text2_pos + value * text2_pos_speed < text2_pos_limit
+        ) {
+          text2.style.scale = text2_scale_limit;
+          text3.style.opacity = 1;
+        } else {
+          text2.style.scale = text2_scale + value * text2_scale_speed;
         }
+      } else {
+        text2.style.opacity = text2_opacity + value * 0.001;
+        text2.style.scale = text2_scale + value * text2_scale_speed;
+        text2_msg.style.transform =
+          'rotateX(' + (text2_deg - value * text2_deg_speed) + 'deg)';
       }
 
       text1.style.top = text1_pos + value * 0.975 + 'px';
@@ -223,7 +224,11 @@ onMounted(() => {
 </style>
 
 <template>
-  <div :class="['z-0 relative w-full sm:px-6 lg:px-12  pb-24 text-darkshade ']">
+  <div
+    :class="[
+      'z-0 relative w-full sm:px-6 lg:px-12  pb-24 text-darkshade  max-w-[100vw] overflow-hidden',
+    ]"
+  >
     <div id="sky" class="absolute h-[1392px] w-[8832px] scale-x-[2]">
       <img class="h-full w-full" :src="sky" />
     </div>
@@ -255,13 +260,16 @@ onMounted(() => {
     />
     -->
   </div>
-  <div id="main" class="bg-color relative">
+  <div id="main" class="bg-color relative max-w-[100vw]">
     <img
       id="fisherman"
       class="absolute m-auto right-0 left-5 h-[200px] z-[1]"
       :src="fisherman"
     />
-    <div id="center" class="absolute top-[14rem]"></div>
+    <div
+      id="center"
+      class="absolute top-[14rem] max-w-[100vw] overflow-hidden"
+    ></div>
     <div
       class="relative overflow-hidden w-full h-full flex justify-center items-center -mt-10 pb-[10rem]"
     >

@@ -89,9 +89,10 @@
         <div
           class="xs:text-sm abt:text-base font-nunito text-left mt-16 pt-4 border-t-2 border-t-black/50"
         >
-          Thanks for your consideration, and I look forward to working together!
+          I look forward to working together! Thanks for your time and
+          attention.
           <br />
-          Feel free to explore my portfolio or contact me directly at
+          So feel free to explore my portfolio or contact me directly at
           <strong class="">johnlorenzdelacruz@gmail.com</strong>. <br /><br />
           <div class="flex -ml-1">
             <a
