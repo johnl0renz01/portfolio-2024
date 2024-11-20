@@ -260,12 +260,15 @@ onMounted(() => {
     />
     -->
   </div>
-  <div id="main" class="bg-color relative max-w-[100vw]">
-    <img
-      id="fisherman"
-      class="absolute m-auto right-0 left-5 h-[200px] z-[1] max-w-[100vw] overflow-hidden"
-      :src="fisherman"
-    />
+  <div id="main" class="bg-color relative">
+    <div class="max-w-[100vw] overflow-hidden">
+      <img
+        id="fisherman"
+        class="absolute m-auto right-0 left-5 h-[200px] z-[1]"
+        :src="fisherman"
+      />
+    </div>
+
     <div
       id="center"
       class="absolute top-[14rem] max-w-[100vw] overflow-hidden"
