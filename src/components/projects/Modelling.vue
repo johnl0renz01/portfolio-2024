@@ -39,13 +39,19 @@ const check = () => {
   <div class="lg:grid lg:grid-cols-2 h-full gap-x-10 gap-y-10 py-20">
     <div v-for="(item, index) in project" :key="item.id" class="relative">
       <div class="">
-        <img class="h-full object-cover" :src="item.image" />
+        <img
+          class="h-full object-cover cursor-pointer"
+          :src="item.image"
+          @click="
+            selectAlbum(item.name);
+            state.showModal = true;
+          "
+        />
         <div class="mt-2 flex justify-between items-center xs:pb-10 lg:pb-0">
           <h1 class="xs:text-[1rem] sm:text-[1.2rem] font-bold font-montserrat">
             {{ item.title }}
           </h1>
           <button
-            id="show-modal"
             @click="
               selectAlbum(item.name);
               state.showModal = true;

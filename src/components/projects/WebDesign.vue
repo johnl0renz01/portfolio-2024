@@ -28,7 +28,7 @@ const project = data;
             {{ item.title }}
           </h1>
           <h1
-            class="xs:text-[0.8rem] lg:text-[1rem] bg-normalshade inline-block px-3 py-1 font-montserrat"
+            class="xs:text-[0.8rem] lg:text-[1rem] bg-normalshade inline-block xs:px-2 sm:px-3 py-1 font-montserrat"
           >
             {{ page.name }} Page
           </h1>

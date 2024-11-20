@@ -27,6 +27,10 @@ import * as CoIcons from 'oh-vue-icons/icons/co';
 const Co = Object.values({ ...CoIcons });
 addIcons(...Co);
 
+import * as MdIcons from 'oh-vue-icons/icons/md';
+const Md = Object.values({ ...MdIcons });
+addIcons(...Md);
+
 const app = createApp(App);
 
 app.use(router);

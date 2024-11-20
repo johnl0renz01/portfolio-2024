@@ -34,9 +34,10 @@ const isActiveLink = routePath => {
       <RouterLink
         :to="'/details/' + item.name"
         target="_blank"
-        class="mt-2 xs:text-[0.9rem] lg:text-[1rem] font-montserrat font-semibold underline"
-        >Explore</RouterLink
-      >
+        class="mt-2 xs:text-[0.9rem] lg:text-[1rem] font-montserrat font-semibold inline-block"
+        ><span class="underline pr-1">Explore</span>
+        <v-icon name="md-openinnew" scale="0.9"></v-icon>
+      </RouterLink>
     </div>
   </div>
 </template>
