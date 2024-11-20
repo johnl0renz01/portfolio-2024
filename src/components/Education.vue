@@ -48,9 +48,9 @@ details > summary::-webkit-details-marker /* Safari */ {
         <div class="border-r-[10px] border-r-white/80"></div>
         <div class="border-l-[10px] border-l-white/80"></div>
       </div>
-      <div class="lg:grid lg:grid-cols-2 h-full text-[1rem] xs:px-16 lg:px-0">
+      <div class="lg:grid lg:grid-cols-2 h-full text-[1rem] xs:px-4 lg:px-0">
         <div
-          class="relative border-r-[1px] xs:border-l-[1px] lg:border-l-0 border-gray-100/40 font-montserrat text-[1.4rem] font-bold drop-shadow xs:text-center lg:text-right lg:pl-[25%] lg:pr-20 xs:px-10 lg:px-0"
+          class="relative border-r-[1px] xs:border-l-[1px] lg:border-l-0 border-gray-100/40 font-montserrat text-[1.4rem] font-bold drop-shadow xs:text-center lg:text-right lg:pl-[25%] lg:pr-20 xs:px-2 lg:px-0"
         >
           <ul>
             <li>
@@ -70,9 +70,9 @@ details > summary::-webkit-details-marker /* Safari */ {
         </div>
 
         <div
-          class="relative xs:text-justify lg:text-left lg:pl-20 xs:pt-10 lg:pt-0 pb-16 lg:pr-[45%] lg:border-l-[1px] border-gray-100/40"
+          class="relative xs:text-center lg:text-left lg:pl-20 xs:pt-10 lg:pt-0 pb-16 lg:pr-[45%] lg:border-l-[1px] border-gray-100/40"
         >
-          <ul class="space-y-3 drop-shadow">
+          <ul class="space-y-3 drop-shadow xs:px-6 lg:px-0 border-gray-100/40">
             <li
               class=""
               v-for="(details, indexDetails) in education.details"

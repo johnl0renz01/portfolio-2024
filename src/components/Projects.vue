@@ -43,13 +43,13 @@ const toggleProject = value => {
     </div>
     <div class="xs:px-16 sm:px-52">
       <div
-        class="flex xs:justify-center lg:justify-between gap-x-2 gap-y-3 font-montserrat xs:text-[0.8rem] sm:text-[1rem] lg:text-[1.1rem]"
+        class="xs:grid xs:grid-cols-2 sm:flex xs:justify-center lg:justify-between gap-x-2 gap-y-3 font-montserrat xs:text-[0.8rem] sm:text-[1rem] lg:text-[1.1rem]"
       >
         <a href="#projects">
           <button
             @click="toggleProject('web_development')"
             :class="[
-              'py-1 px-3 transition duration-50',
+              'py-1 px-3 transition duration-50 h-full w-full',
               state.projectType == 'web_development'
                 ? 'bg-gray-400'
                 : 'bg-gray-700 hover:bg-gray-500',
@@ -62,7 +62,7 @@ const toggleProject = value => {
           <button
             @click="toggleProject('system_development')"
             :class="[
-              'py-1 px-3 transition duration-50',
+              'py-1 px-3 transition duration-50 h-full w-full',
               state.projectType == 'system_development'
                 ? 'bg-gray-400'
                 : 'bg-gray-700 hover:bg-gray-500',
@@ -75,7 +75,7 @@ const toggleProject = value => {
           <button
             @click="toggleProject('web_design')"
             :class="[
-              'py-1 px-3 transition duration-50',
+              'py-1 px-3 transition duration-50 h-full w-full',
               state.projectType == 'web_design'
                 ? 'bg-gray-400'
                 : 'bg-gray-700 hover:bg-gray-500',
@@ -88,7 +88,7 @@ const toggleProject = value => {
           <button
             @click="toggleProject('modelling')"
             :class="[
-              'py-1 px-3 transition duration-50',
+              'py-1 px-3 transition duration-50 h-full w-full',
               state.projectType == 'modelling'
                 ? 'bg-gray-400'
                 : 'bg-gray-700 hover:bg-gray-500',

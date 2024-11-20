@@ -237,11 +237,11 @@ onMounted(() => {
     >
       <div class="text-center">
         <h1
-          class="xs:text-[3.5rem] lg:text-[4rem] xs:leading-[3.5rem] lg:leading-[4rem] font-kanit uppercase font-semibold"
+          class="xs:text-[3.25rem] lg:text-[4rem] xs:leading-[3.5rem] lg:leading-[4rem] font-kanit uppercase font-semibold"
         >
           I'M John&nbsp;Lorenz Dela&nbsp;Cruz
         </h1>
-        <h6 class="xs:text-[1.25rem] lg:text-[1.5rem] mt-2 font-bold">
+        <h6 class="xs:text-[1.2rem] lg:text-[1.5rem] mt-2 font-bold">
           welcome to my portfolio :)
         </h6>
         <div class="mt-3">
@@ -295,7 +295,7 @@ onMounted(() => {
         <div id="text2_container" class="relative">
           <h1
             id="text2_msg"
-            class="xs:text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] xs:leading-[2.5rem] sm:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] font-kanit uppercase font-bold"
+            class="xs:text-[2rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] xs:leading-[2.5rem] sm:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] font-kanit uppercase font-bold"
           >
             Rise with the Tide
           </h1>
@@ -343,7 +343,7 @@ onMounted(() => {
         <div id="text1_container" class="relative">
           <h1
             id="text1_msg"
-            class="xs:text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] xs:leading-[2.5rem] sm:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] font-kanit uppercase font-bold"
+            class="xs:text-[2rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] xs:leading-[2.5rem] sm:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] font-kanit uppercase font-bold"
           >
             Endure waves
           </h1>
