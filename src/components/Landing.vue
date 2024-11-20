@@ -233,7 +233,7 @@ onMounted(() => {
       <img class="h-full w-full" :src="sky" />
     </div>
     <div
-      class="relative min-h-[calc(100vh-20vh)] flex items-center justify-center"
+      class="relative xs:min-h-[calc(100vh-30vh)] lg:min-h-[calc(100vh-20vh)] flex items-center justify-center"
     >
       <div class="text-center">
         <h1
@@ -260,7 +260,7 @@ onMounted(() => {
     />
     -->
   </div>
-  <div id="main" class="bg-color relative max-w-[100vw] overflow-hidden">
+  <div id="main" class="bg-color relative max-w-[100vw] overflow-x-clip">
     <img
       id="fisherman"
       class="absolute m-auto right-0 left-5 h-[200px] z-[1]"
@@ -269,7 +269,7 @@ onMounted(() => {
 
     <div
       id="center"
-      class="absolute top-[14rem] max-w-[100vw] overflow-hidden"
+      class="absolute top-[17rem] max-w-[100vw] overflow-hidden"
     ></div>
     <div
       class="relative overflow-hidden w-full h-full flex justify-center items-center -mt-10 pb-[10rem]"
