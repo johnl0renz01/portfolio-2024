@@ -76,91 +76,106 @@ export default {
     @keyup.esc="$emit('close')"
   >
     <div
-      class="overflow-y-auto fixed z-[100] top-0 left-0 w-full h-full bg-black flex transition-opacity ease-linear duration-200"
+      class="overflow-y-auto fixed z-[100] top-0 left-0 right-0 w-full h-full bg-black flex transition-opacity ease-linear duration-200"
     >
       <div
-        class="min-h-screen text-center flex flex-col gap-y-2 w-full lg:mx-[10rem] xl:mx-[20rem] mt-6 p-4 transition ease-linear shadow-[0_2px_8px_0px_rgba(0,0,0,0.3)]"
+        class="mx-auto min-h-screen sm:px-[5rem] lg:px-[10rem] xl:px-[20rem]"
       >
         <div
-          class="relative flex justify-center items-center font-montserrat text-white xs:text-[1.25rem] lg:text-[1.5rem] font-bold"
+          class="h-full text-center flex flex-col gap-y-2 w-full mt-6 p-4 transition ease-linear shadow-[0_2px_8px_0px_rgba(0,0,0,0.3)]"
         >
-          <div>
-            {{ props.album.title }}
-          </div>
-          <div class="absolute right-0 top-0">
-            <button
-              class="font-jura text-white text-3xl font-normal w-8 h-8 text-right"
-              @click="$emit('close')"
-            >
-              &times;
-            </button>
-          </div>
-        </div>
-
-        <div class="overflow-y-auto">
-          <div class="relative bg-gray-500 text-white">
-            <a
-              :href="[
-                '#image' +
-                  (dynamic.imgIndex + 1 == 0
-                    ? dynamic.imgs.length
-                    : dynamic.imgIndex + 1),
-              ]"
-            >
+          <div
+            class="relative flex justify-center items-center font-montserrat text-white xs:text-[1.25rem] lg:text-[1.5rem] font-bold"
+          >
+            <div>
+              {{ props.album.title }}
+            </div>
+            <div class="absolute right-0 top-0">
               <button
-                @click="previousImage"
-                class="absolute top-0 bottom-0 left-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-2 pr-3 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1]"
+                class="font-jura text-white text-3xl font-normal w-8 h-8 text-right"
+                @click="$emit('close')"
               >
-                <span class="flex flex-row items-center"><</span>
+                &times;
               </button>
-            </a>
-            <img class="h-[40rem] w-full object-cover" :src="state" alt="" />
-            <a
-              :href="[
-                '#image' +
-                  (dynamic.imgIndex == dynamic.imgs.length
-                    ? 1
-                    : dynamic.imgIndex + 1),
-              ]"
-            >
-              <button
-                @click="nextImage"
-                class="absolute top-0 bottom-0 right-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-3 pr-2 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1] z-[9999]"
-              >
-                <span class="flex flex-row items-center h-full">></span>
-              </button>
-            </a>
+            </div>
           </div>
 
-          <!-- <div v-for="(item, index) in state" :key="item.id">
+          <div class="relative overflow-hidden">
+            <div
+              class="absolute z-[1] blur_img w-full h-full dynamic.imgsBlur[dynamic.imgIndex]"
+            >
+              <img class="h-full w-full object-cover" :src="state" alt="" />
+            </div>
+            <div :class="['z-[2] relative w-full  text-white ']">
+              <a
+                :href="[
+                  '#image' +
+                    (dynamic.imgIndex + 1 == 0
+                      ? dynamic.imgs.length
+                      : dynamic.imgIndex + 1),
+                ]"
+              >
+                <button
+                  @click="previousImage"
+                  class="absolute top-0 bottom-0 left-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-2 pr-3 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1]"
+                >
+                  <span class="flex flex-row items-center"><</span>
+                </button>
+              </a>
+              <img
+                class="z-[2] xs:h-[15rem] sm:h-[20rem] lg:h-[30rem] xl:h-[40rem] w-screen object-contain"
+                :src="state"
+                alt=""
+              />
+              <a
+                :href="[
+                  '#image' +
+                    (dynamic.imgIndex == dynamic.imgs.length
+                      ? 1
+                      : dynamic.imgIndex + 1),
+                ]"
+              >
+                <button
+                  @click="nextImage"
+                  class="absolute top-0 bottom-0 right-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-3 pr-2 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1] z-[9999]"
+                >
+                  <span class="flex flex-row items-center h-full">></span>
+                </button>
+              </a>
+            </div>
+
+            <!-- <div v-for="(item, index) in state" :key="item.id">
             <img v-if="index == dynamic.imgIndex" :src="[item]" />
           </div>-->
-        </div>
-        <div class="flex items-center mt-2 mb-2">
-          <div class="grow mr-2 border-b-2 border-white"></div>
-          <h1 class="xs:text-lg lg:text-xl text-white">
-            {{ dynamic.imgName }}
-          </h1>
-          <div class="grow ml-2 border-b-2 border-white"></div>
-        </div>
-        <div class="whitespace-nowrap overflow-hidden text-white">
+          </div>
+          <div class="flex items-center mt-2 mb-2">
+            <div class="grow mr-2 border-b-2 border-white"></div>
+            <h1 class="xs:text-lg lg:text-xl text-white">
+              {{ dynamic.imgName }}
+            </h1>
+            <div class="grow ml-2 border-b-2 border-white"></div>
+          </div>
           <div
-            v-for="(item, index) in props.album.items"
-            :key="item.id"
-            class="inline-block"
+            class="xs:grid xs:grid-cols-3 lg:block max-h-[calc(100vh-50vh)] lg:whitespace-nowrap overflow-hidden text-white"
           >
-            <a :id="['image' + (index + 1)]" :href="['#image' + (index + 1)]">
-              <img
-                @click="goToImage(index)"
-                :class="[
-                  'h-[5rem] mr-4 p-1.5 cursor-pointer transition duration-50',
-                  index == dynamic.imgIndex
-                    ? ' border-[1px] border-white '
-                    : 'border-b-[1px] border-b-white/0 hover:border-b-white',
-                ]"
-                :src="[item.image]"
-              />
-            </a>
+            <div
+              v-for="(item, index) in props.album.items"
+              :key="item.id"
+              class="inline-block"
+            >
+              <a :id="['image' + (index + 1)]" :href="['#image' + (index + 1)]">
+                <img
+                  @click="goToImage(index)"
+                  :class="[
+                    'h-[5rem] mr-4 p-1.5 cursor-pointer transition duration-50 w-full object-cover',
+                    index == dynamic.imgIndex
+                      ? ' border-[1px] border-white '
+                      : 'border-b-[1px] border-b-white/0 hover:border-b-white',
+                  ]"
+                  :src="[item.image]"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -190,5 +205,9 @@ export default {
 .modal-leave-to .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.blur_img {
+  filter: blur(10px);
 }
 </style>
