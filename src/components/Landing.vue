@@ -269,7 +269,7 @@ onMounted(() => {
 
     <div
       id="center"
-      class="absolute top-[17rem] max-w-[100vw] overflow-hidden"
+      class="absolute xs:top-[20rem] lg:top-[17rem] max-w-[100vw] overflow-hidden"
     ></div>
     <div
       class="relative overflow-hidden w-full h-full flex justify-center items-center -mt-10 pb-[10rem]"
