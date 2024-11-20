@@ -34,19 +34,19 @@ const album = [
 
       {
         image: dining_perspective1,
-        imageName: 'Perspective One',
-      },
-      {
-        image: dining_perspective2,
         imageName: 'Perspective Two',
       },
       {
-        image: dining_perspective3,
+        image: dining_perspective2,
         imageName: 'Perspective Three',
       },
       {
-        image: dining_perspective4,
+        image: dining_perspective3,
         imageName: 'Perspective Four',
+      },
+      {
+        image: dining_perspective4,
+        imageName: 'Perspective Five',
       },
       {
         image: dining_close1,
