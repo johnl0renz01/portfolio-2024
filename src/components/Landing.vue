@@ -263,7 +263,7 @@ onMounted(() => {
   <div id="main" class="bg-color relative max-w-[100vw]">
     <img
       id="fisherman"
-      class="absolute m-auto right-0 left-5 h-[200px] z-[1]"
+      class="absolute m-auto right-0 left-5 h-[200px] z-[1] max-w-[100vw] overflow-hidden"
       :src="fisherman"
     />
     <div
@@ -291,7 +291,10 @@ onMounted(() => {
         class="h-[496px] w-full object-cover absolute"
       />
 
-      <div id="text2" class="text-center text-white absolute z-[9]">
+      <div
+        id="text2"
+        class="text-center text-white absolute z-[9] max-w-[100vw] overflow-hidden"
+      >
         <div id="text2_container" class="relative">
           <h1
             id="text2_msg"
@@ -339,7 +342,10 @@ onMounted(() => {
         :src="corals_4"
         class="h-[1500px] w-full object-cover absolute z-10"
       />
-      <div id="text1" class="text-center text-white absolute">
+      <div
+        id="text1"
+        class="text-center text-white absolute max-w-[100vw] overflow-hidden"
+      >
         <div id="text1_container" class="relative">
           <h1
             id="text1_msg"
