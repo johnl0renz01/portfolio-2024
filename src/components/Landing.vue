@@ -244,7 +244,7 @@ onMounted(() => {
         <h6 class="xs:text-[1.2rem] lg:text-[1.5rem] mt-2 font-bold">
           welcome to my portfolio :)
         </h6>
-        <div class="mt-3">
+        <div class="mt-3 hidden">
           <a href="#center">
             <button class="bg-normalshade px-3 py-2 text-white">Explore</button>
           </a>

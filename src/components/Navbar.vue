@@ -1,20 +1,20 @@
 <script setup>
 import { RouterLink, useRoute } from 'vue-router';
-//import logo from '@/assets/img/logo.png';
+import logo from '@/assets/logo.png';
 </script>
 
 <template>
   <nav
     class="bg-transparent mx-auto sm:px-6 lg:px-12 absolute top-0 left-0 right-0 overflow-hidden"
   >
-    <div class="flex h-20 items-center justify-between">
+    <div class="flex h-24 items-center justify-between">
       <div
         class="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
       >
         <RouterLink class="flex flex-shrink-0 items-center" to="/">
-          <span class="hidden md:block text-darkshade text-2xl font-bold"
-            >Logo</span
-          >
+          <div class="hidden md:flex items-center bg-darkshade">
+            <img :src="logo" class="h-14" />
+          </div>
         </RouterLink>
 
         <div class="md:ml-auto">

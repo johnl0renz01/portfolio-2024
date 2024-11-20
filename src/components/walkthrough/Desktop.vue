@@ -41,10 +41,10 @@ onMounted(async () => {
           </div>
         </div>
         <div
-          class="xs:mt-2 sm:mt-3 lg:mt-0 lg:pl-20 lg:pr-20 lg:border-l-[1px] border-gray-100/40"
+          class="xs:mt-4 sm:mt-5 lg:mt-0 lg:pl-20 lg:pr-20 lg:border-l-[1px] border-gray-100/40"
         >
           <h1
-            class="xs:text-[1rem] lg:text-[1.2rem] lg:mb-3 font-semibold font-montserrat leading-[0.9rem]"
+            class="xs:text-[1rem] lg:text-[1.2rem] xs:mb-3 xl:mb-6 font-semibold font-montserrat leading-[0.9rem]"
           >
             {{ item.title }}
           </h1>

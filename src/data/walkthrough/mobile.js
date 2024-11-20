@@ -1,4 +1,4 @@
-import adaptive_landing from '@/assets/projects/adaptive/landing.png';
+import adaptive_login from '@/assets/projects/adaptive/walkthrough/login.jpg';
 
 const mobile = [
   {
@@ -6,22 +6,22 @@ const mobile = [
     items: [
       {
         title: 'Home',
-        image: adaptive_landing,
+        image: adaptive_login,
         description: 'asdsadas',
       },
       {
         title: 'Home',
-        image: adaptive_landing,
+        image: adaptive_login,
         description: 'asdsadas',
       },
       {
         title: 'Home',
-        image: adaptive_landing,
+        image: adaptive_login,
         description: 'asdsadas',
       },
       {
         title: 'Home',
-        image: adaptive_landing,
+        image: adaptive_login,
         description: 'asdsadas',
       },
     ],

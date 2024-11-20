@@ -1,10 +1,15 @@
-<script setup></script>
+<script setup>
+import logo from '@/assets/logo.png';
+import person from '@/assets/person.png';
+</script>
 
 <template>
   <nav class="bg-transparent">
-    <div class="flex h-20 items-center mx-auto xs:px-6 abt:px-12">
+    <div class="flex h-24 items-center mx-auto xs:px-6 abt:px-12">
       <RouterLink class="flex flex-shrink-0 items-center" to="/">
-        <span class="md:block text-darkshade text-2xl font-bold">Logo</span>
+        <div class="bg-darkshade">
+          <img :src="logo" class="h-14" />
+        </div>
       </RouterLink>
     </div>
   </nav>
@@ -15,11 +20,7 @@
       class="abt:grid abt:grid-cols-2 abt:gap-x-16 abt:place-items-start abt:py-10"
     >
       <div class="flex justify-center max-h-[44rem] overflow-hidden">
-        <img
-          class="object-cover"
-          src="https://i.pinimg.com/originals/7a/9d/0d/7a9d0d3e2678927b6d1994d9b078030b.png"
-          alt=""
-        />
+        <img class="object-cover" :src="person" alt="" />
       </div>
       <div class="">
         <h1
@@ -29,27 +30,33 @@
         </h1>
         <div class="relative">
           <div
-            class="font-montserrat mb-12 xs:text-[1.1rem] abt:text-[1.4rem] font-bold"
+            class="font-montserrat mb-12 xs:text-[1.1rem] abt:text-[1.4rem] xs:font-semibold sm:font-bold"
           >
             <ul
-              class="xs:grid xs:grid-cols-2 xs:text-center sm:px-10 abt:px-0 abt:hidden block xl:text-left xl:flex xl:flex-row abt:gap-x-4"
+              class="xs:hidden sm:grid sm:grid-cols-2 xs:text-center sm:px-10 abt:px-0 abt:hidden block xl:text-left xl:flex xl:flex-row abt:gap-x-4"
             >
               <li
-                class="abt:border-r-2 border-black/50 xs:px-2 abt:px-0 abt:pr-5"
+                class="abt:border-r-2 border-black/50 sm:px-2 abt:px-0 abt:pr-5"
               >
                 Full-Stack Developer
               </li>
               <li
-                class="abt:border-r-2 border-black/50 xs:px-2 abt:px-0 abt:pr-5"
+                class="abt:border-r-2 border-black/50 sm:px-2 abt:px-0 abt:pr-5"
               >
                 Creative Artist
               </li>
               <li
-                class="abt:border-r-2 border-black/50 xs:px-2 abt:px-0 abt:pr-5"
+                class="abt:border-r-2 border-black/50 sm:px-2 abt:px-0 abt:pr-5"
               >
                 Passionate Learner
               </li>
               <li class="border-black/50">Tech Enthusiast</li>
+            </ul>
+            <ul class="xs:flex sm:hidden flex-wrap justify-center gap-x-2">
+              <li>[Full-Stack Developer]</li>
+              <li>[Creative Artist]</li>
+              <li>[Passionate Learner]</li>
+              <li>[Tech Enthusiast]</li>
             </ul>
             <div class="hidden abt:flex xl:hidden flex-wrap gap-x-5">
               <div class="border-r-2 border-black pr-5">

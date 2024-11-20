@@ -28,8 +28,9 @@ const projects = [
     ],
     color: 'bg-[#699d14]',
     link: 'https://www.pia-sfe.live',
-    username: 'guest',
-    password: '123456',
+    linkType: 'Restricted',
+    username: '',
+    password: '',
     walkthrough: 'desktop',
   },
   {
