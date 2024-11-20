@@ -76,7 +76,7 @@ export default {
     @keyup.esc="$emit('close')"
   >
     <div
-      class="overflow-y-auto fixed z-[100] top-0 left-0 right-0 w-full h-full bg-black flex transition-opacity ease-linear duration-200"
+      class="overflow-y-auto style-4 fixed z-[100] top-0 left-0 right-0 w-full h-full bg-black flex transition-opacity ease-linear duration-200"
     >
       <div
         class="mx-auto min-h-screen sm:px-[5rem] lg:px-[10rem] xl:px-[20rem]"
@@ -90,7 +90,7 @@ export default {
             <div>
               {{ props.album.title }}
             </div>
-            <div class="absolute right-0 top-0">
+            <div class="absolute right-0 -top-1">
               <button
                 class="font-jura text-white text-3xl font-normal w-8 h-8 text-right"
                 @click="$emit('close')"
@@ -150,7 +150,7 @@ export default {
           </div>
           <div class="flex items-center mt-2 mb-2">
             <div class="grow mr-2 border-b-2 border-white"></div>
-            <h1 class="xs:text-lg lg:text-xl text-white">
+            <h1 class="xs:text-base sm:text-lg lg:text-xl text-white">
               {{ dynamic.imgName }}
             </h1>
             <div class="grow ml-2 border-b-2 border-white"></div>
