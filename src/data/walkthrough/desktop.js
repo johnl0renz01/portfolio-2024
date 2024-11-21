@@ -72,8 +72,6 @@ import rodeotrip_schedules from '@/assets/projects/rodeotrip/walkthrough/schedul
 import rodeotrip_search1 from '@/assets/projects/rodeotrip/walkthrough/search1.jpg';
 import rodeotrip_search2 from '@/assets/projects/rodeotrip/walkthrough/search2.jpg';
 
-//import codedeity_,landing from '@/assets/projects/codedeity/walkthrough/landing.jpg';
-
 const desktop = [
   {
     name: 'pia',
@@ -288,7 +286,7 @@ const desktop = [
     name: 'turo',
     items: [
       {
-        title: 'Landing',
+        title: 'Home',
         image: turo_landing,
         description:
           "Introduces the features and encourages users to start their journey. It highlights the website's functionality, such as search, start survey, and randomly select a restaurant.",
@@ -399,7 +397,7 @@ const desktop = [
           "Determine how most users consume food, whether it's in light, moderate, or heavy quantities.",
       },
       {
-        title: 'Random',
+        title: 'Random Restaurant',
         image: turo_random,
         description:
           'Generates random restaurant recommendation for users who want to try something new. It’s perfect for quick decisions or breaking away from usual dining habits.',
@@ -411,59 +409,74 @@ const desktop = [
     name: 'rodeo-trip',
     items: [
       {
-        title: 'About Page',
-        image: rodeotrip_about,
+        title: 'User Type',
+        image: rodeotrip_login1,
         description:
-          'The about page provides an overview of the Rodeo Trip app and its mission to simplify bus ticket bookings. It highlights the key benefits of the platform, such as time-saving automation and user convenience.',
+          'The first login step asks users to choose to continue as guest or administrator. A valid credentials for admins are required.',
       },
       {
-        title: 'Booking Step 1',
+        title: 'Login',
+        image: rodeotrip_login2,
+        description:
+          "This step verifies the admin's credentials. Once authenticated, users are redirected to their dashboard with full control in the system.",
+      },
+      {
+        title: 'Home',
+        image: rodeotrip_landing,
+        description:
+          "Introduces users with the system's description, and showcasing its available features in menu bar. It serves as the starting point for exploring and booking tickets.",
+      },
+      {
+        title: 'Choosing Bus',
         image: rodeotrip_booking1,
         description:
-          'The first step in the booking process involves selecting the destination and departure date. Users can also specify preferences such as seat type or additional options.',
+          'The initial step in the booking process is choosing the type of bus, as the seats, pricing, and overall experience differ depending on the bus type. ',
       },
       {
-        title: 'Booking Step 2',
+        title: 'Information Fill-Up',
         image: rodeotrip_booking2,
         description:
-          'In this step, users review available bus schedules and choose the most convenient option. Detailed information about the bus, including features and stops, is also displayed.',
+          'In this step, the passengers enter details for the reservation, including detailed information about the time, distance, and boarding point of the bus. After fill-up they can see total price of their ticket',
       },
       {
-        title: 'Booking Step 3',
+        title: 'Select Schedule',
         image: rodeotrip_booking3,
         description:
-          'Users confirm their seat selection and enter passenger details for the reservation. This step ensures all required information is collected for a seamless booking experience.',
+          'This step in the booking process allows users to review available bus schedules and choose the most convenient option to travel. ',
       },
       {
-        title: 'Booking Step 4',
+        title: 'Pick Bus Seats',
         image: rodeotrip_booking4,
         description:
-          'The final step in the booking process allows users to review and confirm their reservation. Payment options are provided for quick and secure transactions.',
+          'Users can specify their seat location. They must confirm their seat selection for the reservation with corresponding date. After that, they can proceed to payment, various payment options are provided for quick and secure transactions. ',
+      },
+
+      {
+        title: 'Search Ticket',
+        image: rodeotrip_search1,
+        description:
+          "To search, the users must enter their ticket's unique number. It ensures quick and accurate matching of ticket details.",
+      },
+      {
+        title: 'Search Result',
+        image: rodeotrip_search2,
+        description:
+          "The ticket is available in two different sizes and includes the company logo, address, and essential details such as the passenger's name, journey date, seat numbers, boarding point, etc..",
       },
       {
         title: 'Cancel Booking',
         image: rodeotrip_cancel,
         description:
-          'This feature enables users to cancel their bookings easily, with clear policies displayed. It provides a hassle-free process to adjust travel plans when needed.',
+          'This feature enables users to cancel their bookings easily. By identifying ticket details and giving reason of cancellation, it provides a hassle-free process to adjust travel plans when needed.',
       },
+
       {
-        title: 'Landing Page',
-        image: rodeotrip_landing,
+        title: 'Schedules',
+        image: rodeotrip_schedules,
         description:
-          'The landing page introduces users to the app, showcasing its features and encouraging them to get started. It serves as the starting point for exploring and booking tickets.',
+          'Shows the schedule of buses for selected routes, including departure and arrival times. This feature helps users plan their trips more effectively.',
       },
-      {
-        title: 'Login Step 1',
-        image: rodeotrip_login1,
-        description:
-          'The first login step asks users to enter their credentials to access the system. New users are guided to create an account for seamless usage.',
-      },
-      {
-        title: 'Login Step 2',
-        image: rodeotrip_login2,
-        description:
-          'This step verifies the user’s credentials and provides recovery options if needed. Once authenticated, users are redirected to their dashboard.',
-      },
+
       {
         title: 'Bus Models',
         image: rodeotrip_models,
@@ -471,22 +484,10 @@ const desktop = [
           'Displays various bus models available for trips, including their features and seating capacities. Users can browse and select buses that best meet their comfort and travel needs.',
       },
       {
-        title: 'Schedules',
-        image: rodeotrip_schedules,
+        title: 'About',
+        image: rodeotrip_about,
         description:
-          'Shows the schedule of buses for selected routes, including departure and arrival times. This feature helps users plan their trips more effectively.',
-      },
-      {
-        title: 'Search Step 1',
-        image: rodeotrip_search1,
-        description:
-          'The first search step allows users to enter key details such as departure and destination locations. It ensures quick and accurate matching of available options.',
-      },
-      {
-        title: 'Search Step 2',
-        image: rodeotrip_search2,
-        description:
-          'The second search step refines results by providing filters such as travel time, price, and amenities. Users can find the perfect trip based on their preferences.',
+          'The about page provides an overview of the Rodeo Trip app and its mission to simplify bus ticket bookings. It highlights the key benefits of the platform, such as time-saving automation and user convenience.',
       },
     ],
   },
