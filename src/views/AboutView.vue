@@ -13,7 +13,7 @@ onMounted(async () => {
   <nav class="bg-transparent">
     <div class="flex h-24 items-center mx-auto xs:px-6 abt:px-12">
       <div
-        className="group hidden md:flex justify-center items-center relative overflow-hidden hover:scale-110 transition duration-200 ease-linear"
+        class="group relative overflow-hidden hover:scale-110 transition duration-200 ease-linear"
       >
         <RouterLink class="flex flex-shrink-0 items-center" to="/">
           <div class="flex items-center bg-darkshade">
@@ -21,7 +21,7 @@ onMounted(async () => {
           </div>
         </RouterLink>
         <div
-          className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-30 group-hover:animate-shine"
+          class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-30 group-hover:animate-shine"
         ></div>
       </div>
     </div>

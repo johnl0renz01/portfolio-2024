@@ -41,7 +41,7 @@ const check = () => {
     <div v-for="(item, index) in project" :key="item.id" class="relative">
       <div class="">
         <div
-          className="group flex justify-center text-center relative overflow-hidden cursor-pointer"
+          class="group flex justify-center text-center relative overflow-hidden cursor-pointer"
           @click="
             selectAlbum(item.name);
             state.showModal = true;
@@ -49,11 +49,11 @@ const check = () => {
         >
           <img
             :src="item.image"
-            className="h-full object-cover ease-in-out duration-500  group-hover:scale-125"
+            class="h-full object-cover ease-in-out duration-500 group-hover:scale-125"
           />
 
           <div
-            className="absolute w-full h-full opacity-10 hover:bg-white transition-opacity duration-500 group-hover:opacity-10"
+            class="absolute w-full h-full opacity-10 hover:bg-white transition-opacity duration-500 group-hover:opacity-10"
           ></div>
         </div>
 
