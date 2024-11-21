@@ -48,7 +48,7 @@ const isActiveLink = routePath => {
           ]"
         ></span>
         <span
-          class="absolute -bottom-0.5 left-0 h-[0.5px] transition-all duration bg-white w-full"
+          class="absolute -bottom-[0.12rem] left-0 h-[0.05rem] bg-white w-full"
         ></span>
       </div>
     </div>

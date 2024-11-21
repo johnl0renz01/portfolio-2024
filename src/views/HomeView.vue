@@ -6,6 +6,12 @@ import Education from '@/components/Education.vue';
 import Experience from '@/components/Experience.vue';
 import Projects from '@/components/Projects.vue';
 import Skills from '@/components/Skills.vue';
+
+import { onMounted } from 'vue';
+
+onMounted(async () => {
+  document.title = 'Portfolio - John Lorenz Dela Cruz';
+});
 </script>
 
 <style scoped>

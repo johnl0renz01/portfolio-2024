@@ -1,6 +1,12 @@
 <script setup>
 import logo from '@/assets/logo.png';
 import person from '@/assets/person.png';
+
+import { onMounted } from 'vue';
+
+onMounted(async () => {
+  document.title = 'About - John Lorenz Dela Cruz';
+});
 </script>
 
 <template>
