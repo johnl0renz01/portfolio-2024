@@ -40,7 +40,7 @@ const projects = [
     title: 'Adaptive Sensei',
     date: 'May 2024 - July 2024',
     objective:
-      'A mobile web-based system to optimize student understanding of linear equations through interactive lessons and adaptive learning tools.\n\nAdditionally, it seeks to support research in algebra education by collecting data on student performance, which can be used to refine teaching methods and inform future educational practices.',
+      'To develop a mobile web-based system to optimize student understanding of linear equations through interactive lessons and adaptive learning tools.\n\nAdditionally, it seeks to support research in algebra education by collecting data on student performance, which can be used to refine teaching methods and inform future educational practices.',
     techstack: [
       { tech: 'HTML' },
       { tech: 'CSS' },
@@ -117,7 +117,7 @@ const projects = [
     title: 'Code Deity',
     date: 'Nov 2021 (Unfinished)',
     objective:
-      "Game that teach basics of programming in a fun and interactive way by guiding users through various scenarios in a person's daily journey.\n\nIt aims to allows users to input commands, explore different outcomes, and understand how programming works. ",
+      "To build a game that teach basics of programming in a fun and interactive way by guiding users through various scenarios in a person's daily journey.\n\nIt aims to allows users to input commands, explore different outcomes, and understand how programming works. ",
     techstack: [
       { tech: 'ActionScript' },
       { tech: 'Adobe Animate' },
