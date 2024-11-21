@@ -1,6 +1,7 @@
 <script setup>
 import { reactive, defineProps, onMounted } from 'vue';
 import dataWalkthroughMobile from '@/data/walkthrough/mobile.js';
+import Picture from '@/components/modal/Picture.vue';
 
 const dataMobile = dataWalkthroughMobile;
 
@@ -10,6 +11,8 @@ const props = defineProps({
 
 const state = reactive({
   walkthrough: [],
+  picture: '',
+  showModal: false,
 });
 
 onMounted(async () => {
@@ -37,7 +40,13 @@ onMounted(async () => {
             v-for="item in state.walkthrough.items"
             class="inline-block h-full xs:max-w-[17rem] lg:max-w-[21rem] overflow-hidden mr-16"
           >
-            <div class="relative h-full">
+            <div
+              class="relative h-full cursor-pointer"
+              @click="
+                state.picture = item.image;
+                state.showModal = true;
+              "
+            >
               <div class="absolute z-[1] blur_img w-full h-full">
                 <img class="h-full object-cover" :src="item.image" alt="" />
               </div>
@@ -71,4 +80,14 @@ onMounted(async () => {
       </div>
     </div>
   </div>
+
+  <Teleport to="body">
+    <Picture
+      :picture="state.picture"
+      :padding="'px-0'"
+      :show="state.showModal"
+      @close="state.showModal = false"
+    >
+    </Picture>
+  </Teleport>
 </template>

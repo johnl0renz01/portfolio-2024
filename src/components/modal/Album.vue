@@ -75,21 +75,15 @@ export default {
 </script>
 
 <template>
-  <Transition
-    name="modal"
-    class="no-doc-scroll"
-    tabindex="0"
-    ref="modal"
-    @keyup.esc="$emit('close')"
-  >
+  <Transition name="modal" tabindex="0" ref="modal" @keyup.esc="$emit('close')">
     <div
-      class="overflow-y-auto style-4 fixed z-[100] top-0 left-0 right-0 w-full h-full bg-black flex transition-opacity ease-linear duration-200"
+      class="select-none overflow-y-auto style-4 fixed z-[100] top-0 left-0 right-0 w-full h-full bg-black flex transition-opacity ease-linear duration-200"
     >
       <div
         class="mx-auto min-h-screen sm:px-[5rem] lg:px-[10rem] xl:px-[20rem]"
       >
         <div
-          class="h-full text-center flex flex-col gap-y-2 w-full xs:px-4 lg:px-0 transition ease-linear shadow-[0_2px_8px_0px_rgba(0,0,0,0.3)]"
+          class="h-full text-center flex flex-col gap-y-2 w-full xs:px-4 lg:px-0 transition ease-linear"
         >
           <div
             class="relative flex justify-center items-center xs:mt-4 sm:mt-10 font-montserrat text-white xs:text-[1.25rem] lg:text-[1.5rem] font-bold"

@@ -1,7 +1,15 @@
 <script setup>
+import { reactive } from 'vue';
 import data from '@/data/projects/webdesign.js';
+import Picture from '@/components/modal/Picture.vue';
 
 const project = data;
+
+const state = reactive({
+  picture: '',
+  showModal: false,
+  link: '',
+});
 </script>
 
 <template>
@@ -34,10 +42,27 @@ const project = data;
           </h1>
         </div>
 
-        <a :href="[page.link]" target="_blank"
-          ><img class="h-full object-cover" :src="page.image"
-        /></a>
+        <img
+          @click="
+            state.picture = page.image;
+            state.link = page.link;
+            state.showModal = true;
+          "
+          class="h-full object-contain cursor-pointer"
+          :src="page.image"
+        />
       </div>
     </div>
   </div>
+
+  <Teleport to="body">
+    <Picture
+      :picture="state.picture"
+      :padding="'xs:px-2 sm:px-10 lg:px-[5rem] xl:px-[10rem]'"
+      :link="state.link"
+      :show="state.showModal"
+      @close="state.showModal = false"
+    >
+    </Picture>
+  </Teleport>
 </template>

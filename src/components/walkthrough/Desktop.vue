@@ -1,6 +1,7 @@
 <script setup>
 import { reactive, defineProps, onMounted } from 'vue';
 import dataWalkthroughDesktop from '@/data/walkthrough/desktop.js';
+import Picture from '@/components/modal/Picture.vue';
 
 const dataDesktop = dataWalkthroughDesktop;
 
@@ -10,6 +11,8 @@ const props = defineProps({
 
 const state = reactive({
   walkthrough: [],
+  picture: '',
+  showModal: false,
 });
 
 onMounted(async () => {
@@ -45,7 +48,14 @@ onMounted(async () => {
           class="lg:col-span-2 xs:pr-1 lg:pr-10 xl:pr-20 lg:border-r-[1px] border-gray-100/40"
         >
           <div class="relative col-span-2">
-            <img class="object-cover" :src="item.image" />
+            <img
+              @click="
+                state.picture = item.image;
+                state.showModal = true;
+              "
+              class="object-cover cursor-pointer"
+              :src="item.image"
+            />
           </div>
         </div>
         <div
@@ -63,4 +73,14 @@ onMounted(async () => {
       </div>
     </div>
   </div>
+
+  <Teleport to="body">
+    <Picture
+      :picture="state.picture"
+      :padding="'xs:px-2 sm:px-10 lg:px-[5rem] xl:px-[10rem]'"
+      :show="state.showModal"
+      @close="state.showModal = false"
+    >
+    </Picture>
+  </Teleport>
 </template>
