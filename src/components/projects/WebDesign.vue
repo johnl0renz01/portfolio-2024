@@ -35,7 +35,7 @@ const project = data;
         </div>
 
         <a :href="[page.link]" target="_blank"
-          ><img class="h-full" :src="page.image"
+          ><img class="h-full object-cover" :src="page.image"
         /></a>
       </div>
     </div>
