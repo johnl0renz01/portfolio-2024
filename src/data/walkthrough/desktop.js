@@ -72,24 +72,6 @@ import rodeotrip_schedules from '@/assets/projects/rodeotrip/walkthrough/schedul
 import rodeotrip_search1 from '@/assets/projects/rodeotrip/walkthrough/search1.jpg';
 import rodeotrip_search2 from '@/assets/projects/rodeotrip/walkthrough/search2.jpg';
 
-import adaptive_about from '@/assets/projects/adaptive/walkthrough/about.jpg';
-import adaptive_admin from '@/assets/projects/adaptive/walkthrough/admin.jpg';
-import adaptive_help from '@/assets/projects/adaptive/walkthrough/help.jpg';
-import adaptive_hint from '@/assets/projects/adaptive/walkthrough/hint.jpg';
-import adaptive_history from '@/assets/projects/adaptive/walkthrough/history.jpg';
-
-import adaptive_learn from '@/assets/projects/adaptive/walkthrough/learn.jpg';
-import adaptive_leave from '@/assets/projects/adaptive/walkthrough/leave.jpg';
-import adaptive_lessons from '@/assets/projects/adaptive/walkthrough/lessons.jpg';
-import adaptive_login from '@/assets/projects/adaptive/walkthrough/login.jpg';
-import adaptive_manual from '@/assets/projects/adaptive/walkthrough/manual.jpg';
-
-import adaptive_menu from '@/assets/projects/adaptive/walkthrough/menu.jpg';
-import adaptive_skip from '@/assets/projects/adaptive/walkthrough/skip.jpg';
-import adaptive_solve1 from '@/assets/projects/adaptive/walkthrough/solve1.jpg';
-import adaptive_solve2 from '@/assets/projects/adaptive/walkthrough/solve2.jpg';
-import adaptive_steps from '@/assets/projects/adaptive/walkthrough/steps.jpg';
-
 //import codedeity_,landing from '@/assets/projects/codedeity/walkthrough/landing.jpg';
 
 const desktop = [
@@ -299,6 +281,212 @@ const desktop = [
         image: pia_help2,
         description:
           'When having trouble navigating the system, admins can visit the help tab, which offers a guide to all administrator features.',
+      },
+    ],
+  },
+  {
+    name: 'turo',
+    items: [
+      {
+        title: 'Landing',
+        image: turo_landing,
+        description:
+          "Introduces the features and encourages users to start their journey. It highlights the website's functionality, such as search, start survey, and randomly select a restaurant.",
+      },
+      {
+        title: 'Login',
+        image: turo_login,
+        description:
+          'Allows users to securely access their accounts by entering their credentials. ',
+      },
+      {
+        title: 'Sign Up',
+        image: turo_signup,
+        description:
+          'New users can create an account by providing their details. Signing up unlocks features to give reviews and bookmark restaurants.',
+      },
+      {
+        title: 'Settings',
+        image: turo_settings,
+        description:
+          'With a simple design for navigation, the users can manage their account name, username, email, and password',
+      },
+      {
+        title: 'Search Interface',
+        image: turo_search1,
+        description:
+          'The initial search interface where users can input preferences to find suitable restaurants. It simplifies the process of discovering new places based on personalized criteria.',
+      },
+      {
+        title: 'Search Result',
+        image: turo_search2,
+        description:
+          'After the user input a category, it shows the most related restaurant according to their search query. This ensures users can easily find their preferred restaurants.',
+      },
+      {
+        title: 'Overview',
+        image: turo_overview1,
+        description:
+          'Shows the featured cuisines that the restaurant has to offer with corresponding ratings and reviews. Users can quickly decide if the restaurant meets their basic preferences before diving deeper.',
+      },
+      {
+        title: 'Gallery',
+        image: turo_gallery,
+        description:
+          'Displays a collection of images showcasing the restaurant’s ambiance, popular dishes, and decor. Users can browse through photos to get a visual sense of the dining experience before visiting.',
+      },
+      {
+        title: 'Details',
+        image: turo_overview2,
+        description:
+          'Displays extended information about the restaurant, including cuisine, popular dishes, and average cost. Helping users make informed decisions based on detailed insights.',
+      },
+
+      {
+        title: 'Add Review',
+        image: turo_review2,
+        description:
+          'Allows users to write reviews and rate restaurants based on their dining experiences. This feature helps build a community-driven platform for authentic feedback.',
+      },
+      {
+        title: 'Reviews',
+        image: turo_review1,
+        description:
+          'Displays user reviews and ratings for the selected restaurant, helping others make informed decisions. Reviews can also be sorted by the star rating.',
+      },
+      {
+        title: 'Menu',
+        image: turo_menu,
+        description:
+          'The food menu is shown for browsing dishes, offering a clear layout of appetizers, mains, sides, desserts, and drinks for efficient dining experience.',
+      },
+      {
+        title: 'Direction',
+        image: turo_direction,
+        description:
+          'Provides the google map location to the selected restaurant, ensuring users can easily find their way. ',
+      },
+
+      {
+        title: 'Share',
+        image: turo_share,
+        description:
+          'Ability to share restaurant with friends through social media or messaging apps. This feature promotes collaboration and social dining experiences among users.',
+      },
+
+      {
+        title: 'Sample One ',
+        image: turo_survey1,
+        description:
+          'The step of the survey collects data if the user is in hurry to find the closest restaurant in their area. ',
+      },
+      {
+        title: 'Sample Two',
+        image: turo_survey2,
+        description:
+          'The system also asks the quantity of people to suggest the fitted restaurant to accommodate customers.',
+      },
+      {
+        title: 'Sample Three',
+        image: turo_survey3,
+        description:
+          'Focuses on specific dietary restrictions or allergies to filter unsuitable restaurant options. This step ensures users get safe and appropriate dining suggestions.',
+      },
+      {
+        title: 'Sample Four',
+        image: turo_survey4,
+        description:
+          "Determine how most users consume food, whether it's in light, moderate, or heavy quantities.",
+      },
+      {
+        title: 'Random',
+        image: turo_random,
+        description:
+          'Generates random restaurant recommendation for users who want to try something new. It’s perfect for quick decisions or breaking away from usual dining habits.',
+      },
+    ],
+  },
+
+  {
+    name: 'rodeo-trip',
+    items: [
+      {
+        title: 'About Page',
+        image: rodeotrip_about,
+        description:
+          'The about page provides an overview of the Rodeo Trip app and its mission to simplify bus ticket bookings. It highlights the key benefits of the platform, such as time-saving automation and user convenience.',
+      },
+      {
+        title: 'Booking Step 1',
+        image: rodeotrip_booking1,
+        description:
+          'The first step in the booking process involves selecting the destination and departure date. Users can also specify preferences such as seat type or additional options.',
+      },
+      {
+        title: 'Booking Step 2',
+        image: rodeotrip_booking2,
+        description:
+          'In this step, users review available bus schedules and choose the most convenient option. Detailed information about the bus, including features and stops, is also displayed.',
+      },
+      {
+        title: 'Booking Step 3',
+        image: rodeotrip_booking3,
+        description:
+          'Users confirm their seat selection and enter passenger details for the reservation. This step ensures all required information is collected for a seamless booking experience.',
+      },
+      {
+        title: 'Booking Step 4',
+        image: rodeotrip_booking4,
+        description:
+          'The final step in the booking process allows users to review and confirm their reservation. Payment options are provided for quick and secure transactions.',
+      },
+      {
+        title: 'Cancel Booking',
+        image: rodeotrip_cancel,
+        description:
+          'This feature enables users to cancel their bookings easily, with clear policies displayed. It provides a hassle-free process to adjust travel plans when needed.',
+      },
+      {
+        title: 'Landing Page',
+        image: rodeotrip_landing,
+        description:
+          'The landing page introduces users to the app, showcasing its features and encouraging them to get started. It serves as the starting point for exploring and booking tickets.',
+      },
+      {
+        title: 'Login Step 1',
+        image: rodeotrip_login1,
+        description:
+          'The first login step asks users to enter their credentials to access the system. New users are guided to create an account for seamless usage.',
+      },
+      {
+        title: 'Login Step 2',
+        image: rodeotrip_login2,
+        description:
+          'This step verifies the user’s credentials and provides recovery options if needed. Once authenticated, users are redirected to their dashboard.',
+      },
+      {
+        title: 'Bus Models',
+        image: rodeotrip_models,
+        description:
+          'Displays various bus models available for trips, including their features and seating capacities. Users can browse and select buses that best meet their comfort and travel needs.',
+      },
+      {
+        title: 'Schedules',
+        image: rodeotrip_schedules,
+        description:
+          'Shows the schedule of buses for selected routes, including departure and arrival times. This feature helps users plan their trips more effectively.',
+      },
+      {
+        title: 'Search Step 1',
+        image: rodeotrip_search1,
+        description:
+          'The first search step allows users to enter key details such as departure and destination locations. It ensures quick and accurate matching of available options.',
+      },
+      {
+        title: 'Search Step 2',
+        image: rodeotrip_search2,
+        description:
+          'The second search step refines results by providing filters such as travel time, price, and amenities. Users can find the perfect trip based on their preferences.',
       },
     ],
   },

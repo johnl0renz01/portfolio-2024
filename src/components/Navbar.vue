@@ -11,11 +11,18 @@ import logo from '@/assets/logo.png';
       <div
         class="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
       >
-        <RouterLink class="flex flex-shrink-0 items-center" to="/">
-          <div class="hidden md:flex items-center bg-darkshade">
-            <img :src="logo" class="h-14" />
-          </div>
-        </RouterLink>
+        <div
+          className="group hidden md:flex justify-center items-center relative overflow-hidden hover:scale-110 transition duration-200 ease-linear"
+        >
+          <RouterLink class="flex flex-shrink-0 items-center" to="/">
+            <div class="flex items-center bg-darkshade">
+              <img :src="logo" class="h-14" />
+            </div>
+          </RouterLink>
+          <div
+            className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-30 group-hover:animate-shine"
+          ></div>
+        </div>
 
         <div class="md:ml-auto">
           <div class="flex space-x-2 font-bold">

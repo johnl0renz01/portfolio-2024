@@ -1,4 +1,5 @@
 <script setup>
+import router from '@/router';
 import Album from '@/components/modal/Album.vue';
 import data from '@/data/projects/modelling.js';
 import dataAlbum from '@/data/modal/album.js';
@@ -39,16 +40,27 @@ const check = () => {
   <div class="lg:grid lg:grid-cols-2 h-full gap-x-10 gap-y-10 py-20">
     <div v-for="(item, index) in project" :key="item.id" class="relative">
       <div class="">
-        <img
-          class="h-full object-cover cursor-pointer"
-          :src="item.image"
+        <div
+          className="group flex justify-center text-center relative overflow-hidden cursor-pointer"
           @click="
             selectAlbum(item.name);
             state.showModal = true;
           "
-        />
+        >
+          <img
+            :src="item.image"
+            className="h-full object-cover ease-in-out duration-500  group-hover:scale-125"
+          />
+
+          <div
+            className="absolute w-full h-full opacity-10 hover:bg-white transition-opacity duration-500 group-hover:opacity-10"
+          ></div>
+        </div>
+
         <div class="mt-2 flex justify-between items-center xs:pb-10 lg:pb-0">
-          <h1 class="xs:text-[1rem] sm:text-[1.2rem] font-bold font-montserrat">
+          <h1
+            class="xs:text-[1rem] sm:text-[1.2rem] font-semibold font-montserrat"
+          >
             {{ item.title }}
           </h1>
           <button
@@ -69,8 +81,14 @@ const check = () => {
     <Album
       :album="state.album"
       v-if="state.showModal"
-      @close="state.showModal = false"
-      @keydown.esc="state.showModal = false"
+      @close="
+        router.push({ path: '/' });
+        state.showModal = false;
+      "
+      @keydown.esc="
+        router.push({ path: '/' });
+        state.showModal = false;
+      "
     >
     </Album>
   </Teleport>

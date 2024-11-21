@@ -101,7 +101,7 @@ const toggleProject = value => {
       <WebDevelopment v-if="state.projectType == 'web_development'" />
       <SystemDevelopment v-if="state.projectType == 'system_development'" />
       <WebDesign v-if="state.projectType == 'web_design'" />
-      <div :class="[state.projectType == 'modelling' ? 'visible' : 'hidden']">
+      <div :class="[state.projectType == 'modelling' ? 'visible' : 'hidden']   ">
         <Modelling />
       </div>
     </div>

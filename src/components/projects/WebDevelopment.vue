@@ -33,13 +33,24 @@ const isActiveLink = routePath => {
       >
         {{ item.description }}
       </p>
-      <RouterLink
-        :to="'/details/' + item.name"
-        target="_blank"
-        class="mt-2 xs:text-[0.9rem] lg:text-[1rem] font-montserrat font-semibold inline-block"
-        ><span class="underline pr-1">Explore</span>
-        <v-icon name="md-openinnew" scale="0.9"></v-icon>
-      </RouterLink>
+      <div class="relative group inline-block">
+        <RouterLink
+          :to="'/details/' + item.name"
+          target="_blank"
+          class="mt-2 xs:text-[0.9rem] lg:text-[1rem] font-montserrat font-semibold inline-block"
+          ><span class="pr-1">Explore</span>
+          <v-icon name="md-openinnew" scale="0.9"></v-icon>
+        </RouterLink>
+        <span
+          :class="[
+            'absolute -bottom-1 left-0 w-0 h-1  transition-all duration group-hover:w-full z-[1] ' +
+              item.color,
+          ]"
+        ></span>
+        <span
+          class="absolute -bottom-0.5 left-0 h-[0.5px] transition-all duration bg-white w-full"
+        ></span>
+      </div>
     </div>
   </div>
 </template>
