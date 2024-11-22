@@ -5,7 +5,6 @@ const mobile = [
     name: 'adaptive-sensei',
     items: [
       {
-<<<<<<< HEAD
         title: 'Login',
         image: adaptive_login,
         description:
@@ -88,16 +87,6 @@ const mobile = [
         image: adaptive_manual,
         description:
           'Offers detailed instructions for using the system effectively.',
-=======
-        title: 'Home',
-        image: adaptive_login,
-        description: 'asdsadas',
-      },
-      {
-        title: 'Home',
-        image: adaptive_login,
-        description: 'asdsadas',
->>>>>>> parent of d3bd033 (updated)
       },
 
       {
