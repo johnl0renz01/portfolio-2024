@@ -143,10 +143,6 @@ export default {
                 </button>
               </a>
             </div>
-
-            <!-- <div v-for="(item, index) in state" :key="item.id">
-            <img v-if="index == dynamic.imgIndex" :src="[item]" />
-          </div>-->
           </div>
           <div class="flex items-center mt-2 mb-2">
             <div class="grow mr-2 border-b-2 border-white"></div>

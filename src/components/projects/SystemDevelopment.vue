@@ -3,11 +3,6 @@ import { RouterLink, useRoute } from 'vue-router';
 import data from '@/data/projects/systemdevelopment.js';
 
 const project = data;
-
-const isActiveLink = routePath => {
-  const route = useRoute();
-  return route.path === routePath;
-};
 </script>
 
 <template>
