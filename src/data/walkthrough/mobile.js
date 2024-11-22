@@ -90,21 +90,10 @@ const mobile = [
       },
 
       {
-<<<<<<< HEAD
         title: 'About Page',
         image: adaptive_about,
         description:
           'Introduces Adaptive Sensei and its goal to enhance learning of students.',
-=======
-        title: 'Home',
-        image: adaptive_login,
-        description: 'asdsadas',
-      },
-      {
-        title: 'Home',
-        image: adaptive_login,
-        description: 'asdsadas',
->>>>>>> parent of d3bd033 (updated)
       },
     ],
   },
