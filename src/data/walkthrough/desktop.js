@@ -531,26 +531,26 @@ const desktop = [
         title: 'Load Game',
         image: codedeity_load,
         description:
-          'Enables users to load a saved game and continue their journey seamlessly. This ensures no progress is lost during interruptions.',
+          'Enables users to load a saved game and continue their journey. This ensures no progress is lost during game interruptions.',
       },
 
       {
         title: 'Options',
         image: codedeity_options,
         description:
-          'Provides various configuration settings to personalize the gaming experience. Users can adjust audio, controls, and other preferences.',
+          'Provides various configuration settings to personalize the gaming experience. Users can adjust audio, and enable hints.',
       },
       {
         title: 'Gallery',
         image: codedeity_gallery,
         description:
-          'Showcases artwork and completed game scenarios for inspiration. Users can view and share their favorite moments from the game.',
+          'Showcases artwork and completed game scenarios for inspiration. Users can view their favorite moments from the game.',
       },
       {
         title: 'Photo Mode',
         image: codedeity_photo,
         description:
-          'Allows users to capture and save memorable moments from their journey. These snapshots can be shared with friends or kept as souvenirs.',
+          'Allows users to zoom in a picture save it. These snapshots can be shared with friends or kept as souvenirs.',
       },
       {
         title: 'Achievements',
@@ -562,21 +562,23 @@ const desktop = [
         title: 'Create User',
         image: codedeity_create,
         description:
-          'Allows users to create their own scenarios and customize their journey. This fosters creativity and deeper engagement with the game.',
+          "When starting new game, character's name and gender is required. This focuses personal preferences and deeper engagement within the game.",
       },
 
       {
-        title: 'Tutorial Step 1',
+        title: 'Tutorial Option',
         image: codedeity_tutorial1,
         description:
-          'Introduces the basics of programming and game mechanics. It sets the foundation for understanding commands and outcomes.',
+          'The user have the option to skip the tutorial when starting a new game. Designed to a smooth gameplay for non-beginners.',
       },
       {
-        title: 'Tutorial Step 2',
+        title: 'Tutorial Intro',
         image: codedeity_tutorial2,
         description:
-          'Builds on foundational concepts with interactive examples. Users gain hands-on experience with step-by-step guidance.',
+          'The Tutorial guide is introduced, illustrating a high-tech robot that serves the player.',
       },
+      //Builds on foundational concepts with interactive examples. Users gain hands-on experience with step-by-step guidance.
+      //Introduces the basics of programming and game mechanics. It sets the foundation for understanding commands and outcomes.
       {
         title: 'Variables',
         image: codedeity_variables,
@@ -584,48 +586,47 @@ const desktop = [
           'Explains variables and their role in storing and manipulating data. It emphasizes their importance in programming logic.',
       },
       {
-        title: 'Code Editor',
+        title: 'Structure',
         image: codedeity_code,
         description:
-          'Provides an interactive space for users to input commands and write code. It allows experimentation and real-time learning of programming concepts.',
+          'Teaches users the correct structure and syntax for writing code. This ensures clarity and minimizes errors in programming.',
       },
       {
-        title: 'Information Page',
+        title: 'Information',
         image: codedeity_information,
         description:
-          'Offers detailed information on game mechanics and programming concepts. It acts as a reference guide for players to improve their skills.',
+          'Offers information on different keyword concepts. It acts as a reference guide for players to understand the meaning of code.',
       },
 
       {
-        title: 'Tutorial Step 3',
+        title: 'Event Result',
         image: codedeity_tutorial3,
         description:
-          'Introduces variables and their uses in programming. Players learn how to store and manipulate data effectively.',
+          'The code affects the characters in game, by typing the appropriate code it will create an outcome.',
       },
       {
         title: 'Tutorial Step 4',
         image: codedeity_tutorial4,
         description:
-          'Covers more advanced programming concepts through step-by-step guidance. This prepares users for creating their own scenarios.',
+          'Another practice for the player. This prepares users for creating their own scenarios later in the game.',
       },
       {
         title: 'Sample Scenario 1',
         image: codedeity_sample1,
         description:
-          'Demonstrates a sample scenario to teach basic programming concepts. Users can see how simple commands affect outcomes.',
+          'Presents the environment in which the in-game character lives. It sets the tone for the journey and introduces the player to the world-building elements of the game.',
       },
       {
         title: 'Sample Scenario 2',
         image: codedeity_sample2,
         description:
-          'Offers another example scenario to explore programming outcomes. It builds on earlier scenarios to introduce more depth.',
+          'Introduces the main character, which represents the player within the game. This helps players familiarize themselves with their character’s appearance and role in the story.',
       },
-
       {
         title: 'Sample Scenario 3',
         image: codedeity_sample3,
         description:
-          'Introduces intermediate concepts through a detailed example scenario. This helps users learn conditional logic and loops interactively.',
+          'Presents the first challenge where the player must navigate without the robot’s guidance. It tests the player’s ability to apply programming concepts learned so far.',
       },
       {
         title: 'Save Game',
@@ -637,31 +638,31 @@ const desktop = [
         title: 'Quit Game',
         image: codedeity_quit,
         description:
-          'Lets users exit the game with an option to save progress. This ensures they can resume where they left off at any time.',
+          'Provides players with the option to save their progress before exiting. They can choose to return to the main menu or leave the game completely.',
       },
       {
         title: 'Sample Scenario 4',
         image: codedeity_sample4,
         description:
-          'Presents a complex scenario to challenge users and build problem-solving skills. It encourages thinking critically to achieve goals.',
+          'Demonstrates the long-term consequences of a decision the player has made earlier. This highlights the importance of choices and their impact on the game’s narrative.',
       },
       {
         title: 'Sample Scenario 5',
         image: codedeity_sample5,
         description:
-          'Features an advanced scenario showcasing real-world programming applications. It highlights how programming applies to everyday situations.',
+          'Incorporates the player’s personal preferences when making decisions for the main character. This adds a layer of customization to the gameplay experience.',
       },
       {
         title: 'Sample Scenario 6',
         image: codedeity_sample6,
         description:
-          'Teaches loops and conditional logic through a guided scenario. Users learn to write efficient code for different outcomes.',
+          'Features an important event where the player must choose. This decision not only affects the main character but also impacts other in-game characters and events.',
       },
       {
         title: 'Sample Scenario 7',
         image: codedeity_sample7,
         description:
-          'Explores functions and modularity in programming with an interactive example. This demonstrates how reusable code simplifies tasks.',
+          'Allows players to manipulate the in-game world through programming. The changes made can have a various effect on the environment and other elements of the game.',
       },
     ],
   },
