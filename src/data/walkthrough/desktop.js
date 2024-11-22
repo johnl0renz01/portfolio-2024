@@ -70,6 +70,7 @@ import rodeotrip_schedules from '@/assets/projects/rodeotrip/walkthrough/schedul
 import rodeotrip_search1 from '@/assets/projects/rodeotrip/walkthrough/search1.jpg';
 import rodeotrip_search2 from '@/assets/projects/rodeotrip/walkthrough/search2.jpg';
 
+<<<<<<< HEAD
 import codedeity_achievements from '@/assets/projects/codedeity/walkthrough/achievements.jpg';
 import codedeity_code from '@/assets/projects/codedeity/walkthrough/code.jpg';
 import codedeity_create from '@/assets/projects/codedeity/walkthrough/create.jpg';
@@ -97,6 +98,27 @@ import codedeity_tutorial2 from '@/assets/projects/codedeity/walkthrough/tutoria
 import codedeity_tutorial3 from '@/assets/projects/codedeity/walkthrough/tutorial3.jpg';
 import codedeity_tutorial4 from '@/assets/projects/codedeity/walkthrough/tutorial4.jpg';
 import codedeity_variables from '@/assets/projects/codedeity/walkthrough/variables.jpg';
+=======
+import adaptive_about from '@/assets/projects/adaptive/walkthrough/about.jpg';
+import adaptive_admin from '@/assets/projects/adaptive/walkthrough/admin.jpg';
+import adaptive_help from '@/assets/projects/adaptive/walkthrough/help.jpg';
+import adaptive_hint from '@/assets/projects/adaptive/walkthrough/hint.jpg';
+import adaptive_history from '@/assets/projects/adaptive/walkthrough/history.jpg';
+
+import adaptive_learn from '@/assets/projects/adaptive/walkthrough/learn.jpg';
+import adaptive_leave from '@/assets/projects/adaptive/walkthrough/leave.jpg';
+import adaptive_lessons from '@/assets/projects/adaptive/walkthrough/lessons.jpg';
+import adaptive_login from '@/assets/projects/adaptive/walkthrough/login.jpg';
+import adaptive_manual from '@/assets/projects/adaptive/walkthrough/manual.jpg';
+
+import adaptive_menu from '@/assets/projects/adaptive/walkthrough/menu.jpg';
+import adaptive_skip from '@/assets/projects/adaptive/walkthrough/skip.jpg';
+import adaptive_solve1 from '@/assets/projects/adaptive/walkthrough/solve1.jpg';
+import adaptive_solve2 from '@/assets/projects/adaptive/walkthrough/solve2.jpg';
+import adaptive_steps from '@/assets/projects/adaptive/walkthrough/steps.jpg';
+
+//import codedeity_,landing from '@/assets/projects/codedeity/walkthrough/landing.jpg';
+>>>>>>> parent of d3bd033 (updated)
 
 const desktop = [
   {
@@ -308,6 +330,7 @@ const desktop = [
       },
     ],
   },
+<<<<<<< HEAD
   {
     name: 'turo',
     items: [
@@ -665,6 +688,8 @@ const desktop = [
       },
     ],
   },
+=======
+>>>>>>> parent of d3bd033 (updated)
 ];
 
 export default desktop;

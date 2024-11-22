@@ -8,7 +8,6 @@ const systemdevelopment = [
     title: 'Rodeo Trip',
     description:
       'This system simplifies ticket booking, cancellations, and route inquiries, providing a quick and efficient way to secure reservations.',
-    color: 'bg-[#976300]',
   },
 
   {
@@ -17,7 +16,6 @@ const systemdevelopment = [
     title: 'Code Deity',
     description:
       'Adventure game where players input commands, learning basic programming concepts while exploring various possibilities.',
-    color: 'bg-[#b77285]',
   },
 ];
 

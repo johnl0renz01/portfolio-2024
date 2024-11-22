@@ -1,26 +1,11 @@
-import adaptive_about from '@/assets/projects/adaptive/walkthrough/about.jpg';
-import adaptive_admin from '@/assets/projects/adaptive/walkthrough/admin.jpg';
-import adaptive_help from '@/assets/projects/adaptive/walkthrough/help.jpg';
-import adaptive_hint from '@/assets/projects/adaptive/walkthrough/hint.jpg';
-import adaptive_history from '@/assets/projects/adaptive/walkthrough/history.jpg';
-
-import adaptive_learn from '@/assets/projects/adaptive/walkthrough/learn.jpg';
-import adaptive_leave from '@/assets/projects/adaptive/walkthrough/leave.jpg';
-import adaptive_lessons from '@/assets/projects/adaptive/walkthrough/lessons.jpg';
 import adaptive_login from '@/assets/projects/adaptive/walkthrough/login.jpg';
-import adaptive_manual from '@/assets/projects/adaptive/walkthrough/manual.jpg';
-
-import adaptive_menu from '@/assets/projects/adaptive/walkthrough/menu.jpg';
-import adaptive_skip from '@/assets/projects/adaptive/walkthrough/skip.jpg';
-import adaptive_solve1 from '@/assets/projects/adaptive/walkthrough/solve1.jpg';
-import adaptive_solve2 from '@/assets/projects/adaptive/walkthrough/solve2.jpg';
-import adaptive_steps from '@/assets/projects/adaptive/walkthrough/steps.jpg';
 
 const mobile = [
   {
     name: 'adaptive-sensei',
     items: [
       {
+<<<<<<< HEAD
         title: 'Login',
         image: adaptive_login,
         description:
@@ -103,13 +88,34 @@ const mobile = [
         image: adaptive_manual,
         description:
           'Offers detailed instructions for using the system effectively.',
+=======
+        title: 'Home',
+        image: adaptive_login,
+        description: 'asdsadas',
+      },
+      {
+        title: 'Home',
+        image: adaptive_login,
+        description: 'asdsadas',
+>>>>>>> parent of d3bd033 (updated)
       },
 
       {
+<<<<<<< HEAD
         title: 'About Page',
         image: adaptive_about,
         description:
           'Introduces Adaptive Sensei and its goal to enhance learning of students.',
+=======
+        title: 'Home',
+        image: adaptive_login,
+        description: 'asdsadas',
+      },
+      {
+        title: 'Home',
+        image: adaptive_login,
+        description: 'asdsadas',
+>>>>>>> parent of d3bd033 (updated)
       },
     ],
   },

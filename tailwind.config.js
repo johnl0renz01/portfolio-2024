@@ -187,14 +187,6 @@ export default {
         'span-15': 'span 15 / span 15',
         'span-16': 'span 16 / span 16',
       },
-      animation: {
-        shine: 'shine 2s infinite',
-      },
-      keyframes: {
-        shine: {
-          '100%': { left: '125%' },
-        },
-      },
     },
   },
   plugins: [],

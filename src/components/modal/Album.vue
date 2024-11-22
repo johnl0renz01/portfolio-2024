@@ -1,5 +1,4 @@
 <script setup>
-import router from '@/router';
 import { reactive, defineProps, onMounted } from 'vue';
 import { useCycleList } from '@vueuse/core';
 
@@ -58,12 +57,6 @@ document.onkeydown = function (e) {
       break;
   }
 };
-
-function scrollToElement(elementId) {
-  document.getElementById(elementId).scrollIntoView({
-    behavior: 'smooth', // Optional: For smooth scrolling
-  });
-}
 </script>
 
 <script>
@@ -89,10 +82,14 @@ export default {
         class="mx-auto min-h-screen sm:px-[5rem] lg:px-[10rem] xl:px-[20rem]"
       >
         <div
+<<<<<<< HEAD
           class="h-full text-center flex flex-col gap-y-2 w-full xs:px-4 lg:px-0 transition ease-linear"
+=======
+          class="h-full text-center flex flex-col gap-y-2 w-full mt-6 p-4 transition ease-linear shadow-[0_2px_8px_0px_rgba(0,0,0,0.3)]"
+>>>>>>> parent of d3bd033 (updated)
         >
           <div
-            class="relative flex justify-center items-center xs:mt-4 sm:mt-10 font-montserrat text-white xs:text-[1.25rem] lg:text-[1.5rem] font-bold"
+            class="relative flex justify-center items-center font-montserrat text-white xs:text-[1.25rem] lg:text-[1.5rem] font-bold"
           >
             <div>
               {{ props.album.title }}
@@ -107,8 +104,10 @@ export default {
             </div>
           </div>
 
-          <div class="relative overflow-hidden mx-1">
-            <div class="absolute z-[1] blur_img w-full h-full">
+          <div class="relative overflow-hidden">
+            <div
+              class="absolute z-[1] blur_img w-full h-full dynamic.imgsBlur[dynamic.imgIndex]"
+            >
               <img class="h-full w-full object-cover" :src="state" alt="" />
             </div>
             <div :class="['z-[2] relative w-full  text-white ']">
@@ -148,8 +147,12 @@ export default {
                 </button>
               </a>
             </div>
+
+            <!-- <div v-for="(item, index) in state" :key="item.id">
+            <img v-if="index == dynamic.imgIndex" :src="[item]" />
+          </div>-->
           </div>
-          <div class="flex items-center mt-2 mb-2 mx-1">
+          <div class="flex items-center mt-2 mb-2">
             <div class="grow mr-2 border-b-2 border-white"></div>
             <h1 class="xs:text-base sm:text-lg lg:text-xl text-white">
               {{ dynamic.imgName }}
@@ -162,7 +165,7 @@ export default {
             <div
               v-for="(item, index) in props.album.items"
               :key="item.id"
-              class="inline-block px-1"
+              class="inline-block"
             >
               <a :id="['image' + (index + 1)]" :href="['#image' + (index + 1)]">
                 <img
