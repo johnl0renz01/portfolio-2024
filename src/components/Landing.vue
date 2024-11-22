@@ -3,7 +3,7 @@ import { reactive, defineProps, onMounted } from 'vue';
 
 import fisherman from '@/assets/parallax/fisherman.png';
 import sky from '@/assets/parallax/sky2.png';
-import mountains from '@/assets/parallax/mountains.png';
+import oceanmountains from '@/assets/parallax/oceanmountains.png';
 import ocean from '@/assets/parallax/oceanplain.png';
 import fish_1 from '@/assets/parallax/fish1.png';
 import fish_2 from '@/assets/parallax/fish2.png';
@@ -16,7 +16,7 @@ import corals_4 from '@/assets/parallax/corals4.png';
 
 onMounted(() => {
   let fisherman = document.getElementById('fisherman');
-  let mountains = document.getElementById('mountains');
+  let oceanmountains = document.getElementById('oceanmountains');
 
   let corals1 = document.getElementById('corals1');
   let corals2 = document.getElementById('corals2');
@@ -67,8 +67,7 @@ onMounted(() => {
     fisherman.style.top = -100 + 'px';
     fisherman.style.scale = 0.5;
 
-    //mountains.style.bottom = -50 + 'px';
-    //mountains.style.scale = 1;
+    oceanmountains.style.top = 400 + 'px';
 
     let text1_msg = document.getElementById('text1_msg');
     let text1_container = document.getElementById('text1_container');
@@ -117,8 +116,7 @@ onMounted(() => {
       fisherman.style.top = -100 + value * 0.02 + 'px';
       fisherman.style.scale = 0.5 + value * 0.00075;
 
-      //mountains.style.bottom = -50 - value * 0.05 + 'px';
-      //mountains.style.scale = 1 + value * 0.00005;
+      oceanmountains.style.top = 400 + value * 0.05 + 'px';
 
       const text1_deg_speed = 0.09;
       const text1_scale_speed = 0.0015;
@@ -294,6 +292,7 @@ onMounted(() => {
       id="center"
       class="absolute xs:top-[30rem] sm:top-[33rem] lg:top-[28rem] xl:top-[17rem] max-w-[100vw] overflow-hidden"
     ></div>
+
     <div
       class="relative overflow-hidden w-full h-full flex justify-center items-center -mt-10 pb-[10rem]"
     >
@@ -307,6 +306,7 @@ onMounted(() => {
           <img src="/src/assets/transparent.gif" class="scale-x-[-1]" />
         </div>
       </div>
+
       <img
         id="ocean"
         class="min-h-[1120px] xl:min-h-[1120px] w-full"
@@ -316,13 +316,19 @@ onMounted(() => {
       <img
         id="corals1"
         :src="corals_1"
-        class="h-[326px] w-full object-cover absolute"
+        class="h-[326px] w-full object-cover absolute z-[7]"
       />
 
       <img
         id="corals2"
         :src="corals_2"
-        class="h-[496px] w-full object-cover absolute"
+        class="h-[496px] w-full object-cover absolute z-[7]"
+      />
+
+      <img
+        id="oceanmountains"
+        :src="oceanmountains"
+        class="h-[686px] w-full object-cover absolute z-[5]"
       />
 
       <div
@@ -349,27 +355,27 @@ onMounted(() => {
       <img
         id="fish1"
         :src="fish_1"
-        class="h-[188px] w-[308px] object-cover absolute top-[22.5rem]"
+        class="h-[188px] w-[308px] object-cover absolute z-[8] top-[22.5rem]"
       />
       <img
         id="fish2"
         :src="fish_2"
-        class="h-[217px] w-[357px] object-cover absolute top-[25rem]"
+        class="h-[217px] w-[357px] object-cover absolute z-[8] top-[25rem]"
       />
       <img
         id="fish3"
         :src="fish_3"
-        class="h-[226px] w-[337px] object-cover absolute bottom-[20rem]"
+        class="h-[226px] w-[337px] object-cover absolute z-[8] bottom-[20rem]"
       />
       <img
         id="fish4"
         :src="fish_4"
-        class="h-[282px] w-[380px] object-cover absolute bottom-[20rem]"
+        class="h-[282px] w-[380px] object-cover absolute z-[8] bottom-[20rem]"
       />
       <img
         id="corals3"
         :src="corals_3"
-        class="h-[540px] w-full object-cover absolute"
+        class="h-[540px] w-full object-cover absolute z-[8]"
       />
       <img
         id="corals4"
@@ -378,7 +384,7 @@ onMounted(() => {
       />
       <div
         id="text1"
-        class="text-center text-white absolute max-w-[100vw] overflow-hidden"
+        class="text-center text-white absolute max-w-[100vw] overflow-hidden z-[9]"
       >
         <div id="text1_container" class="relative">
           <h1
