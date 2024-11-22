@@ -9,6 +9,7 @@ const webdevelopment = [
     title: 'Personal Instructive Agent',
     description:
       "The website enhances algebra learning by an emotional agent that responds to students' progress with expressions like happiness or sadness.",
+    color: 'bg-[#6f9700]',
   },
 
   {
@@ -17,6 +18,7 @@ const webdevelopment = [
     title: 'Adaptive Sensei',
     description:
       'A website to help students learn and practice linear equations for academic research.',
+    color: 'bg-[#863710]',
   },
 
   {
@@ -25,6 +27,7 @@ const webdevelopment = [
     title: 'Turo Food Finder',
     description:
       'This website recommends restaurants based on user preferences to help users make informed meal choices.',
+    color: 'bg-[#0443b5]',
   },
 ];
 
