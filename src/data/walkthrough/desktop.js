@@ -605,25 +605,25 @@ const desktop = [
           'The code affects the characters in game, by typing the appropriate code it will create an outcome.',
       },
       {
-        title: 'Tutorial Step 4',
+        title: 'Coding Practice',
         image: codedeity_tutorial4,
         description:
           'Another practice for the player. This prepares users for creating their own scenarios later in the game.',
       },
       {
-        title: 'Sample Scenario 1',
+        title: 'Game Intro',
         image: codedeity_sample1,
         description:
           'Presents the environment in which the in-game character lives. It sets the tone for the journey and introduces the player to the world-building elements of the game.',
       },
       {
-        title: 'Sample Scenario 2',
+        title: 'Character Intro',
         image: codedeity_sample2,
         description:
           'Introduces the main character, which represents the player within the game. This helps players familiarize themselves with their character’s appearance and role in the story.',
       },
       {
-        title: 'Sample Scenario 3',
+        title: 'First Puzzle',
         image: codedeity_sample3,
         description:
           'Presents the first challenge where the player must navigate without the robot’s guidance. It tests the player’s ability to apply programming concepts learned so far.',
@@ -641,25 +641,25 @@ const desktop = [
           'Provides players with the option to save their progress before exiting. They can choose to return to the main menu or leave the game completely.',
       },
       {
-        title: 'Sample Scenario 4',
+        title: "Action's Effect",
         image: codedeity_sample4,
         description:
           'Demonstrates the long-term consequences of a decision the player has made earlier. This highlights the importance of choices and their impact on the game’s narrative.',
       },
       {
-        title: 'Sample Scenario 5',
+        title: 'Personal Decisions',
         image: codedeity_sample5,
         description:
           'Incorporates the player’s personal preferences when making decisions for the main character. This adds a layer of customization to the gameplay experience.',
       },
       {
-        title: 'Sample Scenario 6',
+        title: "Character's Dillema",
         image: codedeity_sample6,
         description:
           'Features an important event where the player must choose. This decision not only affects the main character but also impacts other in-game characters and events.',
       },
       {
-        title: 'Sample Scenario 7',
+        title: 'Environment Control',
         image: codedeity_sample7,
         description:
           'Allows players to manipulate the in-game world through programming. The changes made can have a various effect on the environment and other elements of the game.',
