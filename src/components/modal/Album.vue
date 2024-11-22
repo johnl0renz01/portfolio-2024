@@ -82,11 +82,7 @@ export default {
         class="mx-auto min-h-screen sm:px-[5rem] lg:px-[10rem] xl:px-[20rem]"
       >
         <div
-<<<<<<< HEAD
           class="h-full text-center flex flex-col gap-y-2 w-full xs:px-4 lg:px-0 transition ease-linear"
-=======
-          class="h-full text-center flex flex-col gap-y-2 w-full mt-6 p-4 transition ease-linear shadow-[0_2px_8px_0px_rgba(0,0,0,0.3)]"
->>>>>>> parent of d3bd033 (updated)
         >
           <div
             class="relative flex justify-center items-center font-montserrat text-white xs:text-[1.25rem] lg:text-[1.5rem] font-bold"
