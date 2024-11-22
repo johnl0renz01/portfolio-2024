@@ -78,6 +78,7 @@ onMounted(async () => {
     <Picture
       :picture="state.picture"
       :padding="'xs:px-2 sm:px-10 lg:px-[5rem] xl:px-[10rem]'"
+      :link="''"
       :show="state.showModal"
       @close="state.showModal = false"
     >
