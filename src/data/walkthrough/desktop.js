@@ -330,7 +330,6 @@ const desktop = [
       },
     ],
   },
-<<<<<<< HEAD
   {
     name: 'turo',
     items: [
@@ -688,8 +687,6 @@ const desktop = [
       },
     ],
   },
-=======
->>>>>>> parent of d3bd033 (updated)
 ];
 
 export default desktop;

@@ -33,7 +33,6 @@ const isActiveLink = routePath => {
       >
         {{ item.description }}
       </p>
-<<<<<<< HEAD
       <div class="relative group inline-block">
         <RouterLink
           :to="'/details/' + item.name"
@@ -52,15 +51,6 @@ const isActiveLink = routePath => {
           class="absolute -bottom-[0.12rem] left-0 h-[0.05rem] bg-white w-full"
         ></span>
       </div>
-=======
-      <RouterLink
-        :to="'/details/' + item.name"
-        target="_blank"
-        class="mt-2 xs:text-[0.9rem] lg:text-[1rem] font-montserrat font-semibold inline-block"
-        ><span class="underline pr-1">Explore</span>
-        <v-icon name="md-openinnew" scale="0.9"></v-icon>
-      </RouterLink>
->>>>>>> parent of d3bd033 (updated)
     </div>
   </div>
 </template>
