@@ -58,7 +58,7 @@ const state = reactive({
   <Teleport to="body">
     <Picture
       :picture="state.picture"
-      :padding="'xs:px-2 sm:px-10 lg:px-[5rem] xl:px-[10rem]'"
+      :padding="'xs:px-2 sm:px-10 lg:px-[5rem] xl:px-[15rem]'"
       :link="state.link"
       :show="state.showModal"
       @close="state.showModal = false"

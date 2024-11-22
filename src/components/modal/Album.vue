@@ -75,7 +75,13 @@ export default {
 </script>
 
 <template>
-  <Transition name="modal" tabindex="0" ref="modal" @keyup.esc="$emit('close')">
+  <Transition
+    name="modal"
+    class="no-doc-scroll"
+    tabindex="0"
+    ref="modal"
+    @keyup.esc="$emit('close')"
+  >
     <div
       class="select-none overflow-y-auto style-4 fixed z-[100] top-0 left-0 right-0 w-full h-full bg-black flex transition-opacity ease-linear duration-200"
     >
@@ -91,9 +97,9 @@ export default {
             <div>
               {{ props.album.title }}
             </div>
-            <div class="absolute right-0 -top-1">
+            <div class="absolute right-0 xs:-top-2 lg:-top-1">
               <button
-                class="font-jura text-white text-3xl font-normal w-8 h-8 text-right"
+                class="font-jura text-white xs:text-[2.25rem] sm:text-[2.5rem] lg:text-[3rem] leading-[1px] font-normal w-10 h-10 text-right"
                 @click="$emit('close')"
               >
                 &times;
@@ -118,7 +124,7 @@ export default {
                   @click="previousImage"
                   class="absolute top-0 bottom-0 left-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-2 pr-3 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1]"
                 >
-                  <span class="flex flex-row items-center"><</span>
+                  <span class="flex flex-row items-center">&lt;</span>
                 </button>
               </a>
               <img
@@ -138,7 +144,7 @@ export default {
                   @click="nextImage"
                   class="absolute top-0 bottom-0 right-0 block bg-black/40 h-full xs:text-[1.5rem] lg:text-[3rem] pl-3 pr-2 font-jura font-thin opacity-[0.5] active:scale-100 hover:opacity-[1] z-[9999]"
                 >
-                  <span class="flex flex-row items-center h-full">></span>
+                  <span class="flex flex-row items-center h-full">&gt;</span>
                 </button>
               </a>
             </div>

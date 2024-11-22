@@ -34,8 +34,6 @@ import pia_sectionlist from '@/assets/projects/pia/walkthrough/sectionlist.jpg';
 import pia_tutorial from '@/assets/projects/pia/walkthrough/tutorial.jpg';
 import pia_whiteboard from '@/assets/projects/pia/walkthrough/whiteboard.jpg';
 
-//import pia_landing from '@/assets/projects/pia/walkthrough/landing.jpg';
-
 import turo_direction from '@/assets/projects/turo/walkthrough/direction.jpg';
 import turo_gallery from '@/assets/projects/turo/walkthrough/gallery.jpg';
 import turo_landing from '@/assets/projects/turo/walkthrough/landing.jpg';
@@ -71,6 +69,34 @@ import rodeotrip_models from '@/assets/projects/rodeotrip/walkthrough/models.jpg
 import rodeotrip_schedules from '@/assets/projects/rodeotrip/walkthrough/schedules.jpg';
 import rodeotrip_search1 from '@/assets/projects/rodeotrip/walkthrough/search1.jpg';
 import rodeotrip_search2 from '@/assets/projects/rodeotrip/walkthrough/search2.jpg';
+
+import codedeity_achievements from '@/assets/projects/codedeity/walkthrough/achievements.jpg';
+import codedeity_code from '@/assets/projects/codedeity/walkthrough/code.jpg';
+import codedeity_create from '@/assets/projects/codedeity/walkthrough/create.jpg';
+import codedeity_gallery from '@/assets/projects/codedeity/walkthrough/gallery.jpg';
+import codedeity_information from '@/assets/projects/codedeity/walkthrough/information.jpg';
+
+import codedeity_load from '@/assets/projects/codedeity/walkthrough/load.jpg';
+import codedeity_menu from '@/assets/projects/codedeity/walkthrough/menu.jpg';
+import codedeity_options from '@/assets/projects/codedeity/walkthrough/options.jpg';
+import codedeity_photo from '@/assets/projects/codedeity/walkthrough/photo.jpg';
+import codedeity_quit from '@/assets/projects/codedeity/walkthrough/quit.jpg';
+
+import codedeity_sample1 from '@/assets/projects/codedeity/walkthrough/sample1.jpg';
+import codedeity_sample2 from '@/assets/projects/codedeity/walkthrough/sample2.jpg';
+import codedeity_sample3 from '@/assets/projects/codedeity/walkthrough/sample3.jpg';
+import codedeity_sample4 from '@/assets/projects/codedeity/walkthrough/sample4.jpg';
+import codedeity_sample5 from '@/assets/projects/codedeity/walkthrough/sample5.jpg';
+
+import codedeity_sample6 from '@/assets/projects/codedeity/walkthrough/sample6.jpg';
+import codedeity_sample7 from '@/assets/projects/codedeity/walkthrough/sample7.jpg';
+import codedeity_save from '@/assets/projects/codedeity/walkthrough/save.jpg';
+import codedeity_tutorial1 from '@/assets/projects/codedeity/walkthrough/tutorial1.jpg';
+import codedeity_tutorial2 from '@/assets/projects/codedeity/walkthrough/tutorial2.jpg';
+
+import codedeity_tutorial3 from '@/assets/projects/codedeity/walkthrough/tutorial3.jpg';
+import codedeity_tutorial4 from '@/assets/projects/codedeity/walkthrough/tutorial4.jpg';
+import codedeity_variables from '@/assets/projects/codedeity/walkthrough/variables.jpg';
 
 const desktop = [
   {
@@ -488,6 +514,154 @@ const desktop = [
         image: rodeotrip_about,
         description:
           'The about page provides an overview of the Rodeo Trip app and its mission to simplify bus ticket bookings. It highlights the key benefits of the platform, such as time-saving automation and user convenience.',
+      },
+    ],
+  },
+
+  {
+    name: 'code-deity',
+    items: [
+      {
+        title: 'Menu',
+        image: codedeity_menu,
+        description:
+          'The central hub for accessing all game features and settings. Its intuitive design ensures smooth navigation for players.',
+      },
+      {
+        title: 'Load Game',
+        image: codedeity_load,
+        description:
+          'Enables users to load a saved game and continue their journey seamlessly. This ensures no progress is lost during interruptions.',
+      },
+
+      {
+        title: 'Options',
+        image: codedeity_options,
+        description:
+          'Provides various configuration settings to personalize the gaming experience. Users can adjust audio, controls, and other preferences.',
+      },
+      {
+        title: 'Gallery',
+        image: codedeity_gallery,
+        description:
+          'Showcases artwork and completed game scenarios for inspiration. Users can view and share their favorite moments from the game.',
+      },
+      {
+        title: 'Photo Mode',
+        image: codedeity_photo,
+        description:
+          'Allows users to capture and save memorable moments from their journey. These snapshots can be shared with friends or kept as souvenirs.',
+      },
+      {
+        title: 'Achievements',
+        image: codedeity_achievements,
+        description:
+          'Tracks and displays user achievements as they progress through the game. This motivates players by rewarding their efforts and milestones.',
+      },
+      {
+        title: 'Create User',
+        image: codedeity_create,
+        description:
+          'Allows users to create their own scenarios and customize their journey. This fosters creativity and deeper engagement with the game.',
+      },
+
+      {
+        title: 'Tutorial Step 1',
+        image: codedeity_tutorial1,
+        description:
+          'Introduces the basics of programming and game mechanics. It sets the foundation for understanding commands and outcomes.',
+      },
+      {
+        title: 'Tutorial Step 2',
+        image: codedeity_tutorial2,
+        description:
+          'Builds on foundational concepts with interactive examples. Users gain hands-on experience with step-by-step guidance.',
+      },
+      {
+        title: 'Variables',
+        image: codedeity_variables,
+        description:
+          'Explains variables and their role in storing and manipulating data. It emphasizes their importance in programming logic.',
+      },
+      {
+        title: 'Code Editor',
+        image: codedeity_code,
+        description:
+          'Provides an interactive space for users to input commands and write code. It allows experimentation and real-time learning of programming concepts.',
+      },
+      {
+        title: 'Information Page',
+        image: codedeity_information,
+        description:
+          'Offers detailed information on game mechanics and programming concepts. It acts as a reference guide for players to improve their skills.',
+      },
+
+      {
+        title: 'Tutorial Step 3',
+        image: codedeity_tutorial3,
+        description:
+          'Introduces variables and their uses in programming. Players learn how to store and manipulate data effectively.',
+      },
+      {
+        title: 'Tutorial Step 4',
+        image: codedeity_tutorial4,
+        description:
+          'Covers more advanced programming concepts through step-by-step guidance. This prepares users for creating their own scenarios.',
+      },
+      {
+        title: 'Sample Scenario 1',
+        image: codedeity_sample1,
+        description:
+          'Demonstrates a sample scenario to teach basic programming concepts. Users can see how simple commands affect outcomes.',
+      },
+      {
+        title: 'Sample Scenario 2',
+        image: codedeity_sample2,
+        description:
+          'Offers another example scenario to explore programming outcomes. It builds on earlier scenarios to introduce more depth.',
+      },
+
+      {
+        title: 'Sample Scenario 3',
+        image: codedeity_sample3,
+        description:
+          'Introduces intermediate concepts through a detailed example scenario. This helps users learn conditional logic and loops interactively.',
+      },
+      {
+        title: 'Save Game',
+        image: codedeity_save,
+        description:
+          'Allows users to save their progress at any point during the game. This ensures their achievements are not lost.',
+      },
+      {
+        title: 'Quit Game',
+        image: codedeity_quit,
+        description:
+          'Lets users exit the game with an option to save progress. This ensures they can resume where they left off at any time.',
+      },
+      {
+        title: 'Sample Scenario 4',
+        image: codedeity_sample4,
+        description:
+          'Presents a complex scenario to challenge users and build problem-solving skills. It encourages thinking critically to achieve goals.',
+      },
+      {
+        title: 'Sample Scenario 5',
+        image: codedeity_sample5,
+        description:
+          'Features an advanced scenario showcasing real-world programming applications. It highlights how programming applies to everyday situations.',
+      },
+      {
+        title: 'Sample Scenario 6',
+        image: codedeity_sample6,
+        description:
+          'Teaches loops and conditional logic through a guided scenario. Users learn to write efficient code for different outcomes.',
+      },
+      {
+        title: 'Sample Scenario 7',
+        image: codedeity_sample7,
+        description:
+          'Explores functions and modularity in programming with an interactive example. This demonstrates how reusable code simplifies tasks.',
       },
     ],
   },

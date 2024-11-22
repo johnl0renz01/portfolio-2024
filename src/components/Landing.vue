@@ -15,7 +15,6 @@ import corals_3 from '@/assets/parallax/corals3.png';
 import corals_4 from '@/assets/parallax/corals4.png';
 
 onMounted(() => {
-  let sky = document.getElementById('sky');
   let fisherman = document.getElementById('fisherman');
   let mountains = document.getElementById('mountains');
 
@@ -64,8 +63,6 @@ onMounted(() => {
     corals2.style.bottom = corals2_pos + 'px';
     corals3.style.bottom = corals3_pos + 'px';
     corals4.style.bottom = corals4_pos + 'px';
-
-    sky.style.left = 0 + 'px';
 
     fisherman.style.top = -100 + 'px';
     fisherman.style.scale = 0.5;
@@ -116,7 +113,6 @@ onMounted(() => {
 
     function setSpeed() {
       let value = window.scrollY;
-      sky.style.left = 0 - value * 10 + 'px';
 
       fisherman.style.top = -100 + value * 0.02 + 'px';
       fisherman.style.scale = 0.5 + value * 0.00075;
@@ -221,16 +217,43 @@ onMounted(() => {
     rgba(0, 70, 70, 1) 100%
   );
 }
+
+#clouds {
+  position: absolute;
+  animation: linear infinite;
+  animation-name: run;
+  animation-duration: 75s;
+}
+@keyframes run {
+  0% {
+    left: 0%;
+  }
+
+  25% {
+    left: 100%;
+  }
+
+  75% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
 </style>
 
 <template>
   <div
     :class="[
-      'z-0 relative w-full sm:px-6 lg:px-12  pb-24 text-darkshade  max-w-[100vw] overflow-hidden',
+      'bg-[#aff1ed] z-0 relative w-full   pb-24 text-darkshade  max-w-[100vw] overflow-hidden',
     ]"
   >
-    <div id="sky" class="absolute h-[1392px] w-[8832px] scale-x-[2]">
-      <img class="h-full w-full" :src="sky" />
+    <div
+      class="absolute h-full w-full bg-[url('/src/assets/parallax/sky2.png')]"
+    >
+      <div id="clouds" class="flex w-full h-full">
+        <img class="h-full w-full scale-x-[4] mix-blend-overlay" :src="sky" />
+      </div>
     </div>
     <div
       class="relative xs:min-h-[calc(100vh-30vh)] lg:min-h-[calc(100vh-20vh)] flex items-center justify-center"
@@ -274,6 +297,16 @@ onMounted(() => {
     <div
       class="relative overflow-hidden w-full h-full flex justify-center items-center -mt-10 pb-[10rem]"
     >
+      <div class="-top-[13rem] scale-y-50 absolute mix-blend-overlay">
+        <div class="flex w-full">
+          <img src="/src/assets/transparent.gif" />
+          <img src="/src/assets/transparent.gif" class="scale-x-[-1]" />
+          <img src="/src/assets/transparent.gif" />
+          <img src="/src/assets/transparent.gif" class="scale-x-[-1]" />
+          <img src="/src/assets/transparent.gif" />
+          <img src="/src/assets/transparent.gif" class="scale-x-[-1]" />
+        </div>
+      </div>
       <img
         id="ocean"
         class="min-h-[1120px] xl:min-h-[1120px] w-full"

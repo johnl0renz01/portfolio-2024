@@ -7,10 +7,14 @@ import Experience from '@/components/Experience.vue';
 import Projects from '@/components/Projects.vue';
 import Skills from '@/components/Skills.vue';
 
+import router from '@/router';
+
 import { onMounted } from 'vue';
 
-onMounted(async () => {
+onMounted(() => {
   document.title = 'Portfolio - John Lorenz Dela Cruz';
+  router.push({ path: '/' });
+  window.scrollTo(0, 0);
 });
 </script>
 
@@ -31,24 +35,6 @@ onMounted(async () => {
     rgb(0, 8, 12) 100%
   );
 }
-
-/**
-.bg {
-  background: rgb(0, 56, 69);
-  background: linear-gradient(180deg, rgb(25, 25, 25) 0%, rgb(7, 7, 7) 100%);
-}
-
-
-.bg {
-  background: rgb(0, 56, 69);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 56, 69, 1) 0%,
-    rgba(0, 18, 22, 1) 100%
-  );
-}
-
-*/
 </style>
 
 <template>
