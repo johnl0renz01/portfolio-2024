@@ -328,7 +328,7 @@ onMounted(() => {
       <img
         id="oceanmountains"
         :src="oceanmountains"
-        class="h-[686px] w-full object-cover absolute z-[5]"
+        class="h-[794px] w-full object-cover absolute z-[5]"
       />
 
       <div

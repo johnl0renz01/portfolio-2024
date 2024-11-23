@@ -49,7 +49,7 @@ onMounted(async () => {
 <template>
   <section
     id="projects"
-    class="flex flex-col bg min-h-screen text-white xs:px-10 sm:px-16 lg:px-24 xl:px-[18rem] xs:py-10 lg:py-14 xl:py-20 pb-[10rem]"
+    class="flex flex-col bg min-h-screen text-white xs:px-10 sm:px-16 lg:px-24 xl:px-[18rem] xs:py-10 lg:py-20 pb-[10rem]"
   >
     <div class="">
       <h1 class="xs:text-[1.5rem] lg:text-[2rem] font-bold font-montserrat">
@@ -101,8 +101,7 @@ onMounted(async () => {
           ><button
             :class="[
               'w-full xs:text-[0.8rem] lg:text-[0.95rem] text-left py-1 px-3  font-montserrat truncate ' +
-                state.project.color +
-                ' bg-opacity-100 hover:bg-opacity-70',
+                state.project.color,
             ]"
           >
             {{ state.project.link }}

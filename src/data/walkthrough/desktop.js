@@ -531,7 +531,7 @@ const desktop = [
         title: 'Load Game',
         image: codedeity_load,
         description:
-          'Enables users to load a saved game and continue their journey. This ensures no progress is lost during game interruptions.',
+          'Enables users to load a saved game and continue their journey. This ensures no progress is lost during interruptions.',
       },
 
       {
@@ -547,7 +547,7 @@ const desktop = [
           'Showcases artwork and completed game scenarios for inspiration. Users can view their favorite moments from the game.',
       },
       {
-        title: 'Photo Mode',
+        title: 'Photo',
         image: codedeity_photo,
         description:
           'Allows users to zoom in a picture save it. These snapshots can be shared with friends or kept as souvenirs.',
@@ -562,20 +562,20 @@ const desktop = [
         title: 'Create User',
         image: codedeity_create,
         description:
-          "When starting new game, character's name and gender is required. This focuses personal preferences and deeper engagement within the game.",
+          'Starting new game requires to give name and select gender for the character. This would define the in-game character.',
       },
 
       {
-        title: 'Tutorial Option',
+        title: 'Skip Tutorial',
         image: codedeity_tutorial1,
         description:
-          'The user have the option to skip the tutorial when starting a new game. Designed to a smooth gameplay for non-beginners.',
+          'Provides an option to skip the tutorial. This is helpful for non-beginners to have a smooth gameplay experience.',
       },
       {
         title: 'Tutorial Intro',
         image: codedeity_tutorial2,
         description:
-          'The Tutorial guide is introduced, illustrating a high-tech robot that serves the player.',
+          'The tutorial guide is introduced, teaching the required information that should be used in the game.',
       },
       //Builds on foundational concepts with interactive examples. Users gain hands-on experience with step-by-step guidance.
       //Introduces the basics of programming and game mechanics. It sets the foundation for understanding commands and outcomes.
@@ -614,13 +614,13 @@ const desktop = [
         title: 'Game Intro',
         image: codedeity_sample1,
         description:
-          'Presents the environment in which the in-game character lives. It sets the tone for the journey and introduces the player to the world-building elements of the game.',
+          'Presents the environment in which the character lives. It sets the tone for the journey and introduces the player to the world-building elements of the game.',
       },
       {
         title: 'Character Intro',
         image: codedeity_sample2,
         description:
-          'Introduces the main character, which represents the player within the game. This helps players familiarize themselves with their character’s appearance and role in the story.',
+          'Introduces the main character, which represents the player. This helps players familiarize themselves with their character’s appearance and role in the story.',
       },
       {
         title: 'First Puzzle',

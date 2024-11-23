@@ -3,11 +3,6 @@ import { RouterLink, useRoute } from 'vue-router';
 import data from '@/data/projects/systemdevelopment.js';
 
 const project = data;
-
-const isActiveLink = routePath => {
-  const route = useRoute();
-  return route.path === routePath;
-};
 </script>
 
 <template>
@@ -22,15 +17,13 @@ const isActiveLink = routePath => {
     <div class="relative">
       <img class="h-full w-full object-cover" :src="item.image" />
     </div>
-    <div class="relative">
+    <div class="relative flex flex-col gap-y-3">
       <h1
         class="xs:text-[1.25rem] lg:text-[1.5rem] xs:pt-4 lg:pt-0 font-bold font-montserrat"
       >
         {{ item.title }}
       </h1>
-      <p
-        class="xs:text-[0.925rem] xs:leading-[1.25rem] lg:text-base py-[0.75rem]"
-      >
+      <p class="xs:text-[0.925rem] xs:leading-[1.25rem] lg:text-base">
         {{ item.description }}
       </p>
       <div class="relative group inline-block">
