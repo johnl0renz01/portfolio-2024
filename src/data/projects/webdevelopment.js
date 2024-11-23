@@ -6,7 +6,7 @@ const webdevelopment = [
   {
     name: 'pia',
     image: pia_thumbnail,
-    title: 'Personal Instructive Agent',
+    title: 'Personal Instructing Agent',
     description:
       "The website enhances algebra learning by an emotional agent that responds to students' progress with expressions like happiness or sadness.",
     color: 'bg-[#6f9700]',
