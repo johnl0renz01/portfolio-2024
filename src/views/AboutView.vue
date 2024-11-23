@@ -10,7 +10,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <nav class="bg-transparent">
+  <nav class="select-none bg-transparent">
     <div class="flex h-24 items-center mx-auto xs:px-6 abt:px-12">
       <div
         class="group relative overflow-hidden hover:scale-110 transition duration-200 ease-linear"
@@ -32,8 +32,10 @@ onMounted(async () => {
     <div
       class="abt:grid abt:grid-cols-2 abt:gap-x-16 abt:place-items-start abt:py-10"
     >
-      <div class="flex justify-center max-h-[44rem] overflow-hidden">
-        <img class="object-cover" :src="person" alt="" />
+      <div
+        class="flex justify-center max-h-[44rem] overflow-hidden select-none"
+      >
+        <img class="object-contain" :src="person" alt="" />
       </div>
       <div class="">
         <h1
@@ -145,42 +147,6 @@ onMounted(async () => {
         </div>
       </div>
     </div>
-
-    <!--
-    <br />
-            <br />
-            I have honed my skills in various
-            <strong>programming languages</strong>,
-            <strong>web development</strong>, and
-            <strong>database management</strong>. With hands-on experience in
-            developing interactive web applications, I specialize in creating
-            seamless user experiences using <strong>JavaScript</strong>,
-            <strong>PHP</strong>, and <strong>MySQL</strong>, along with
-            frameworks such as <strong>ReactJS</strong> and
-            <strong>Tailwind CSS</strong>
-            .
-
-            
-    <div class="flex justify-between">
-      <button
-        class="flex items-center font-roboto font-bold uppercase text-darkshade"
-      >
-        <i
-          class="pi pi-arrow-circle-up rounded-full bg-darkshade text-gray-100 text-[2rem]"
-        ></i>
-
-        <span class="text-[1.25rem]"> Previous </span>
-      </button>
-      <button
-        class="flex items-center font-roboto font-bold uppercase text-darkshade"
-      >
-        <span class="text-[1.25rem]"> Next </span>
-        <i
-          class="pi pi-arrow-circle-down rounded-full bg-darkshade text-gray-100 text-[2rem] shadow-none"
-        ></i>
-      </button>
-    </div>
-    -->
   </section>
 </template>
 

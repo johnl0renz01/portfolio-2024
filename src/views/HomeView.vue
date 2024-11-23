@@ -38,7 +38,7 @@ onMounted(() => {
 </style>
 
 <template>
-  <div class="relative">
+  <div class="relative select-none">
     <div class="z-[1]">
       <Landing />
       <Navbar />
