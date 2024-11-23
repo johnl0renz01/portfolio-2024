@@ -11,7 +11,7 @@ import logo from '@/assets/logo_transparent.png';
       class="flex flex-col justify-center items-center xs:gap-y-6 lg:gap-y-10"
     >
       <img :src="logo" class="xs:w-10 sm:w-14 lg:w-16 object-contain" />
-      <div class="text-center xs:text-sm lg:text-base">
+      <div class="text-center xs:text-sm lg:text-base select-text">
         <div class="mb-4">
           Thank you for visiting my portfolio. <br />
           If you’d like to connect, feel free to reach out! <br />
