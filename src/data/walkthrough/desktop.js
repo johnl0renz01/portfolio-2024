@@ -577,8 +577,6 @@ const desktop = [
         description:
           'The tutorial guide is introduced, teaching the required information that should be used in the game.',
       },
-      //Builds on foundational concepts with interactive examples. Users gain hands-on experience with step-by-step guidance.
-      //Introduces the basics of programming and game mechanics. It sets the foundation for understanding commands and outcomes.
       {
         title: 'Variables',
         image: codedeity_variables,
