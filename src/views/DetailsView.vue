@@ -100,7 +100,7 @@ onMounted(async () => {
           target="_blank"
           ><button
             :class="[
-              'w-full xs:text-[0.8rem] lg:text-[0.95rem] text-left py-1 px-3  font-montserrat truncate ' +
+              'w-full xs:text-[0.8rem] lg:text-[0.95rem] text-left py-1 px-3  font-montserrat truncate bg-opacity-100 hover:bg-opacity-80 ' +
                 state.project.color,
             ]"
           >

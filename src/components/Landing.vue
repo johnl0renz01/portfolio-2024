@@ -67,7 +67,7 @@ onMounted(() => {
     fisherman.style.top = -100 + 'px';
     fisherman.style.scale = 0.5;
 
-    oceanmountains.style.bottom = 300 + 'px';
+    oceanmountains.style.top = 400 + 'px';
 
     let text1_msg = document.getElementById('text1_msg');
     let text1_container = document.getElementById('text1_container');
@@ -116,7 +116,7 @@ onMounted(() => {
       fisherman.style.top = -100 + value * 0.02 + 'px';
       fisherman.style.scale = 0.5 + value * 0.00075;
 
-      oceanmountains.style.top = 300 + value * 0.075 + 'px';
+      oceanmountains.style.top = 400 + value * 0.05 + 'px';
 
       const text1_deg_speed = 0.09;
       const text1_scale_speed = 0.0015;
@@ -193,6 +193,15 @@ onMounted(() => {
     }
   }
 });
+
+/**
+ *  <h1 class="text-[4rem] leading-[4rem] font-kanit uppercase font-bold">
+          Super Long Text&nbsp;Here<br />
+          Another Text...
+        </h1>
+        <h6 class="text-[1.5rem]">Medium super long subtext here...</h6>
+
+ */
 </script>
 
 <style scoped>
@@ -263,6 +272,14 @@ onMounted(() => {
         </div>
       </div>
     </div>
+
+    <!--
+    <img
+      id="mountains"
+      class="h-[345px] w-full object-cover absolute m-auto right-0 left-0"
+      :src="mountains"
+    />
+    -->
   </div>
   <div id="main" class="bg-color relative max-w-[100vw] overflow-x-clip">
     <img
@@ -275,6 +292,7 @@ onMounted(() => {
       id="center"
       class="absolute xs:top-[30rem] sm:top-[33rem] lg:top-[28rem] xl:top-[17rem] max-w-[100vw] overflow-hidden"
     ></div>
+
     <div
       class="relative overflow-hidden w-full h-full flex justify-center items-center -mt-10 pb-[10rem]"
     >
@@ -288,6 +306,7 @@ onMounted(() => {
           <img src="/src/assets/transparent.gif" class="scale-x-[-1]" />
         </div>
       </div>
+
       <img
         id="ocean"
         class="min-h-[1120px] xl:min-h-[1120px] w-full"
@@ -295,15 +314,9 @@ onMounted(() => {
       />
 
       <img
-        id="oceanmountains"
-        :src="oceanmountains"
-        class="h-[1000px] w-full object-cover absolute z-[5]"
-      />
-
-      <img
         id="corals1"
         :src="corals_1"
-        class="h-[326px] w-full object-cover absolute z-[6]"
+        class="h-[326px] w-full object-cover absolute z-[7]"
       />
 
       <img
@@ -312,9 +325,15 @@ onMounted(() => {
         class="h-[496px] w-full object-cover absolute z-[7]"
       />
 
+      <img
+        id="oceanmountains"
+        :src="oceanmountains"
+        class="h-[794px] w-full object-cover absolute z-[5]"
+      />
+
       <div
         id="text2"
-        class="text-center text-white absolute z-[8] max-w-[100vw] overflow-hidden"
+        class="text-center text-white absolute z-[9] max-w-[100vw] overflow-hidden"
       >
         <div id="text2_container" class="relative">
           <h1
@@ -325,7 +344,7 @@ onMounted(() => {
           </h1>
         </div>
       </div>
-      <div id="text3" class="text-center text-white absolute z-[9]">
+      <div id="text3" class="text-center text-white absolute z-10">
         <h6
           class="mt-2 xs:text-[1.3rem] lg:text-[1.4rem] xl:text-[1.5rem] font-bold"
         >
@@ -336,27 +355,27 @@ onMounted(() => {
       <img
         id="fish1"
         :src="fish_1"
-        class="h-[188px] w-[308px] object-cover absolute top-[22.5rem] z-[8]"
+        class="h-[188px] w-[308px] object-cover absolute z-[8] top-[22.5rem]"
       />
       <img
         id="fish2"
         :src="fish_2"
-        class="h-[217px] w-[357px] object-cover absolute top-[25rem] z-[8]"
+        class="h-[217px] w-[357px] object-cover absolute z-[8] top-[25rem]"
       />
       <img
         id="fish3"
         :src="fish_3"
-        class="h-[226px] w-[337px] object-cover absolute bottom-[20rem] z-[8]"
+        class="h-[226px] w-[337px] object-cover absolute z-[8] bottom-[20rem]"
       />
       <img
         id="fish4"
         :src="fish_4"
-        class="h-[282px] w-[380px] object-cover absolute bottom-[20rem] z-[8]"
+        class="h-[282px] w-[380px] object-cover absolute z-[8] bottom-[20rem]"
       />
       <img
         id="corals3"
         :src="corals_3"
-        class="h-[540px] w-full object-cover absolute z-[9]"
+        class="h-[540px] w-full object-cover absolute z-[8]"
       />
       <img
         id="corals4"
@@ -365,7 +384,7 @@ onMounted(() => {
       />
       <div
         id="text1"
-        class="text-center text-white absolute max-w-[100vw] overflow-hidden z-[8]"
+        class="text-center text-white absolute max-w-[100vw] overflow-hidden z-[9]"
       >
         <div id="text1_container" class="relative">
           <h1
