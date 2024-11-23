@@ -544,13 +544,13 @@ const desktop = [
         title: 'Gallery',
         image: codedeity_gallery,
         description:
-          'Showcases artwork and completed game scenarios for inspiration. Users can view and share their favorite moments from the game.',
+          'Showcases artwork and completed game scenarios for inspiration. Users can view their favorite moments from the game.',
       },
       {
         title: 'Photo',
         image: codedeity_photo,
         description:
-          'Allows users to view memorable moments from their journey. These snapshots can be shared with friends or kept as souvenirs.',
+          'Allows users to zoom in a picture save it. These snapshots can be shared with friends or kept as souvenirs.',
       },
       {
         title: 'Achievements',
@@ -572,11 +572,13 @@ const desktop = [
           'Provides an option to skip the tutorial. This is helpful for non-beginners to have a smooth gameplay experience.',
       },
       {
-        title: 'Tutorial Step 2',
+        title: 'Tutorial Intro',
         image: codedeity_tutorial2,
         description:
           'The tutorial guide is introduced, teaching the required information that should be used in the game.',
       },
+      //Builds on foundational concepts with interactive examples. Users gain hands-on experience with step-by-step guidance.
+      //Introduces the basics of programming and game mechanics. It sets the foundation for understanding commands and outcomes.
       {
         title: 'Variables',
         image: codedeity_variables,
@@ -584,29 +586,29 @@ const desktop = [
           'Explains variables and their role in storing and manipulating data. It emphasizes their importance in programming logic.',
       },
       {
-        title: 'Code Format',
+        title: 'Structure',
         image: codedeity_code,
         description:
           'Teaches users the correct structure and syntax for writing code. This ensures clarity and minimizes errors in programming.',
       },
       {
-        title: 'Information Page',
+        title: 'Information',
         image: codedeity_information,
         description:
-          'Offers information about the code keywords. It acts as a reference guide for players to understand the meaning of the code.',
+          'Offers information on different keyword concepts. It acts as a reference guide for players to understand the meaning of code.',
       },
 
       {
-        title: 'Tutorial Practice',
+        title: 'Event Result',
         image: codedeity_tutorial3,
         description:
-          'The tutorial guide request a simple request, requiring players to store and manipulate data effectively.',
+          'The code affects the characters in game, by typing the appropriate code it will create an outcome.',
       },
       {
-        title: 'Event Outcome',
+        title: 'Coding Practice',
         image: codedeity_tutorial4,
         description:
-          'The code has changed the event, allowing for various possibilities. This prepares users for creating their own scenarios.',
+          'Another practice for the player. This prepares users for creating their own scenarios later in the game.',
       },
       {
         title: 'Game Intro',
@@ -639,28 +641,28 @@ const desktop = [
           'Provides players with the option to save their progress before exiting. They can choose to return to the main menu or leave the game completely.',
       },
       {
-        title: 'Future Effect',
+        title: "Action's Effect",
         image: codedeity_sample4,
         description:
           'Demonstrates the long-term consequences of a decision the player has made earlier. This highlights the importance of choices and their impact on the game’s narrative.',
       },
       {
-        title: 'Personal Decision',
+        title: 'Personal Decisions',
         image: codedeity_sample5,
         description:
           'Incorporates the player’s personal preferences when making decisions for the main character. This adds a layer of customization to the gameplay experience.',
       },
       {
-        title: 'Character Dillema',
+        title: "Character's Dillema",
         image: codedeity_sample6,
         description:
-          'Features an important decision where the player must choose. This decision not only affects the main character but also impacts other in-game characters and events.',
+          'Features an important event where the player must choose. This decision not only affects the main character but also impacts other in-game characters and events.',
       },
       {
         title: 'Environment Control',
         image: codedeity_sample7,
         description:
-          'Allows players to manipulate the in-game world through programming. The changes made can have an effect on the environment and other elements of the game.',
+          'Allows players to manipulate the in-game world through programming. The changes made can have a various effect on the environment and other elements of the game.',
       },
     ],
   },
