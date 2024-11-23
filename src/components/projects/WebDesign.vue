@@ -42,15 +42,23 @@ const state = reactive({
           </h1>
         </div>
 
-        <img
+        <div
+          class="group flex justify-center text-center relative overflow-hidden cursor-pointer"
           @click="
             state.picture = page.image;
             state.link = page.link;
             state.showModal = true;
           "
-          class="h-full object-contain cursor-pointer"
-          :src="page.image"
-        />
+        >
+          <img
+            :src="page.image"
+            class="h-full object-cover ease-in-out duration-100 group-hover:scale-90"
+          />
+
+          <div
+            class="absolute w-full h-full opacity-10 hover:bg-white transition-opacity duration-100 group-hover:opacity-10"
+          ></div>
+        </div>
       </div>
     </div>
   </div>

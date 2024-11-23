@@ -40,14 +40,22 @@ onMounted(async () => {
           class="lg:col-span-2 xs:pr-1 lg:pr-20 lg:border-r-[1px] border-gray-100/40"
         >
           <div class="relative col-span-2">
-            <img
+            <div
+              class="group flex justify-center text-center relative overflow-hidden cursor-pointer"
               @click="
                 state.picture = item.image;
                 state.showModal = true;
               "
-              class="object-cover cursor-pointer"
-              :src="item.image"
-            />
+            >
+              <img
+                :src="item.image"
+                class="h-full object-cover ease-in-out duration-100 group-hover:scale-90"
+              />
+
+              <div
+                class="absolute w-full h-full opacity-10 hover:bg-white transition-opacity duration-100 group-hover:opacity-10"
+              ></div>
+            </div>
           </div>
         </div>
         <div

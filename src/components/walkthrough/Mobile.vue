@@ -27,7 +27,7 @@ onMounted(async () => {
 
 <style scoped>
 .blur_img {
-  filter: blur(12.5px);
+  filter: blur(20px);
 }
 </style>
 
@@ -50,10 +50,19 @@ onMounted(async () => {
               <div class="absolute z-[1] blur_img w-full h-full">
                 <img class="h-full object-cover" :src="item.image" alt="" />
               </div>
-              <img
-                class="h-full sticky object-contain z-[2]"
-                :src="item.image"
-              />
+
+              <div
+                class="group flex justify-center text-center relative overflow-hidden cursor-pointer"
+              >
+                <img
+                  :src="item.image"
+                  class="h-full sticky object-contain z-[2] ease-in-out duration-100 group-hover:scale-90"
+                />
+
+                <div
+                  class="absolute w-full h-full opacity-10 hover:bg-white transition-opacity duration-100 group-hover:opacity-10"
+                ></div>
+              </div>
             </div>
           </div>
         </div>
