@@ -10,7 +10,6 @@ import dataProjects from '@/data/projects.js';
 const projects = dataProjects;
 
 const route = useRoute();
-const router = useRouter();
 
 const projectName = route.params.name;
 
@@ -35,21 +34,21 @@ onMounted(async () => {
       break;
     }
   }
+
   document.title = 'Project - ' + state.project.title;
+
+  const element = document.getElementById('details');
+  element.style.background =
+    'linear-gradient(200deg, ' +
+    state.project.bgColor +
+    ' 0%, rgb(0, 0, 0) 100%)';
 });
 </script>
 
-<style scoped>
-.bg {
-  background: rgb(0, 56, 69);
-  background: linear-gradient(180deg, rgb(27, 27, 27) 0%, rgb(10, 10, 10) 100%);
-}
-</style>
-
 <template>
   <section
-    id="projects"
-    class="flex flex-col bg min-h-screen text-white xs:px-10 sm:px-16 lg:px-24 xl:px-[18rem] xs:py-10 lg:py-20 pb-[10rem]"
+    id="details"
+    class="flex flex-col min-h-screen text-white xs:px-10 sm:px-16 lg:px-24 xl:px-[18rem] xs:py-10 lg:py-20 pb-[10rem]"
   >
     <div class="">
       <h1 class="xs:text-[1.5rem] lg:text-[2rem] font-bold font-montserrat">

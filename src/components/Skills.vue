@@ -24,6 +24,7 @@ const bgColor = '#206873';
 
 <template>
   <section
+    id="skills"
     class="flex flex-col min-h-screen bg-transparent text-white xs:px-6 sm:px-16 xl:px-[23rem] py-10 pb-20"
   >
     <div class="mb-10 relative w-full text-center">

@@ -7,7 +7,7 @@ import Modelling from './projects/Modelling.vue';
 import { reactive, defineProps, onMounted } from 'vue';
 
 const state = reactive({
-  projectType: '',
+  projectType: 'web_development',
   previous: '',
 });
 
@@ -20,19 +20,25 @@ const scrollDown = () => {
 
 const toggleProject = value => {
   state.projectType = value;
+
+  /*
+  To hide project type, replace with this.
+  
+  state.projectType = value;
   if (state.previous != state.projectType) {
     state.previous = state.projectType;
   } else {
     state.projectType = '';
     state.previous = '';
   }
+    */
 };
 </script>
 
 <template>
   <section
     id="projects"
-    class="flex flex-col bg-transparent text-white lg:px-[5rem] xl:px-[23rem] py-10 pb-[10rem]"
+    class="min-h-[400px] flex flex-col bg-transparent text-white lg:px-[5rem] xl:px-[23rem] py-10"
   >
     <div class="mb-10 text-center">
       <p

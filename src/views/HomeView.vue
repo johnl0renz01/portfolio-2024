@@ -1,11 +1,10 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue';
-import About from '@/views/AboutView.vue';
 import Landing from '@/components/Landing.vue';
-import Education from '@/components/Education.vue';
-import Experience from '@/components/Experience.vue';
-import Projects from '@/components/Projects.vue';
+import Timeline from '@/components/Timeline.vue';
 import Skills from '@/components/Skills.vue';
+import Projects from '@/components/Projects.vue';
+import Footer from '@/components/Footer.vue';
 
 import router from '@/router';
 
@@ -14,8 +13,15 @@ import { onMounted } from 'vue';
 onMounted(() => {
   document.title = 'Portfolio - John Lorenz Dela Cruz';
   router.push({ path: '/' });
-  window.scrollTo(0, 0);
 });
+
+if (history.scrollRestoration) {
+  history.scrollRestoration = 'manual';
+} else {
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+}
 </script>
 
 <style scoped>
@@ -32,6 +38,7 @@ onMounted(() => {
   background: linear-gradient(
     180deg,
     rgba(1, 20, 26, 1) 0%,
+    rgb(0, 8, 12) 50%,
     rgb(0, 8, 12) 100%
   );
 }
@@ -45,12 +52,12 @@ onMounted(() => {
     </div>
     <div class="absolute left-0 right-0 z-[20]">
       <div class="relative bg">
-        <Experience id="background" />
-        <Education />
-        <Skills id="skills" />
+        <Timeline />
+        <Skills />
       </div>
       <div class="bg2">
-        <Projects id="projects" />
+        <Projects />
+        <Footer />
       </div>
     </div>
   </div>

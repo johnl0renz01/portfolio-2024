@@ -1,9 +1,11 @@
 <script setup>
-import Experience from '@/Experience.vue';
-import Education from '@/Education.vue';
+import Education from '@/components/Education.vue';
+import Experience from '@/components/Experience.vue';
 </script>
 
 <template>
-  <Experience />
-  <Education />
+  <div id="background">
+    <Experience />
+    <Education />
+  </div>
 </template>
